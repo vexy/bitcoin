@@ -237,7 +237,7 @@ class InvalidMessagesTest(VincoinTestFramework):
         self.test_addrv2('unrecognized network',
             [
                 'received: addrv2 (25 bytes)',
-                '9.9.9.9:8333',
+                '9.9.9.9:6333',
                 'Added 1 addresses',
             ],
             bytes.fromhex(
