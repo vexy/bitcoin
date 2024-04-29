@@ -170,12 +170,12 @@ protected:
     uint64_t nPruneAfterHeight;
     uint64_t m_assumed_blockchain_size;
     uint64_t m_assumed_chain_state_size;
-    std::vector<std::string> vSeeds;
+    std::vector<std::string> vSeeds; // a vector of seed to which DNS URLs are appended
+    std::vector<uint8_t> vFixedSeeds; // a vector of fixed IP seeds
     std::vector<unsigned char> base58Prefixes[MAX_BASE58_TYPES];
     std::string bech32_hrp;
     ChainType m_chain_type;
     CBlock genesis;
-    std::vector<uint8_t> vFixedSeeds;
     bool fDefaultConsistencyChecks;
     bool m_is_mockable_chain;
     CCheckpointData checkpointData;
