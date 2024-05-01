@@ -112,10 +112,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xf9;
-        pchMessageStart[1] = 0xbe;
-        pchMessageStart[2] = 0xb4;
-        pchMessageStart[3] = 0xd9;
+        // vÏñÇ
+        pchMessageStart[0] = 0x76;
+        pchMessageStart[1] = 0xcf;
+        pchMessageStart[2] = 0xf1;
+        pchMessageStart[3] = 0xc7;
         nDefaultPort = 6333;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 590;
@@ -126,13 +127,13 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128); // todo: change prefix number ??
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "bc";
+        bech32_hrp = "vc";
 
         fDefaultConsistencyChecks = false;
         m_is_mockable_chain = false;
@@ -208,10 +209,12 @@ public:
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000b6a51f415a67c0da307");
         consensus.defaultAssumeValid = uint256S("0x0000000000000093bcb68c03a9a168ae252572d348a2eaeba2cdf9231d73206f"); // 2500000
 
-        pchMessageStart[0] = 0x0b;
-        pchMessageStart[1] = 0x11;
-        pchMessageStart[2] = 0x09;
-        pchMessageStart[3] = 0x07;
+        // TVÑÇ
+        pchMessageStart[0] = 0x54;
+        pchMessageStart[1] = 0x56;
+        pchMessageStart[2] = 0xD1;
+        pchMessageStart[3] = 0xC7;
+
         nDefaultPort = 16333;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 42;
@@ -222,18 +225,18 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"));
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"));
 
-        // currently both vectors  - vFixedSeeds and vSeeds are empty by default
+// currently both vectors  - vFixedSeeds and vSeeds are empty by default
         // leave the call to the clear() function because it does not affect the state 
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,132);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239); // todo: change prefix number ??
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tb";
+        bech32_hrp = "tv";
 
         fDefaultConsistencyChecks = false;
         m_is_mockable_chain = false;
@@ -355,13 +358,13 @@ public:
             }
         };
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,132);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tb";
+        bech32_hrp = "tv";
 
         fDefaultConsistencyChecks = false;
         m_is_mockable_chain = false;
@@ -409,10 +412,11 @@ public:
         consensus.nMinimumChainWork = uint256{};
         consensus.defaultAssumeValid = uint256{};
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        // Rvñç
+        pchMessageStart[0] = 0x52;
+        pchMessageStart[1] = 0x76;
+        pchMessageStart[2] = 0xf1;
+        pchMessageStart[3] = 0xe7;
         nDefaultPort = 18444;
         nPruneAfterHeight = opts.fastprune ? 100 : 1000;
         m_assumed_blockchain_size = 0;
@@ -484,13 +488,13 @@ public:
             0
         };
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,132);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "bcrt";
+        bech32_hrp = "vcrt";
     }
 };
 
