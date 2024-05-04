@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Bitcoin Developers
+// Copyright (c) 2023 Vincoin Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +19,7 @@ AST_MATCHER(clang::StringLiteral, unterminated)
 }
 } // namespace
 
-namespace bitcoin {
+namespace vincoin {
 
 void LogPrintfCheck::registerMatchers(clang::ast_matchers::MatchFinder* finder)
 {
@@ -57,4 +57,4 @@ void LogPrintfCheck::check(const clang::ast_matchers::MatchFinder::MatchResult& 
     }
 }
 
-} // namespace bitcoin
+} // namespace vincoin

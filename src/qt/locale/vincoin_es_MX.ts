@@ -56,7 +56,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
@@ -91,11 +91,11 @@
         <translation type="unfinished">M&amp;ostrar</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n conexiones activas con la red Bitcoin</numerusform>
-            <numerusform>%n conexiones activas con la red Bitcoin </numerusform>
+            <numerusform>%n conexiones activas con la red Vincoin</numerusform>
+            <numerusform>%n conexiones activas con la red Vincoin </numerusform>
         </translation>
     </message>
     <message>
@@ -339,7 +339,7 @@ El proceso de migración creará una copia de seguridad de la billetera antes de
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>Failed to calculate bump fees, because unconfirmed UTXOs depend on enormous cluster of unconfirmed transactions.</source>
         <translation type="unfinished">No se pudo calcular la comisión de incremento porque las UTXO sin confirmar dependen de un grupo enorme de transacciones no confirmadas.</translation>

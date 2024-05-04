@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2022 The Bitcoin Core developers
+// Copyright (c) 2009-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -153,7 +153,7 @@ bool CheckSignatureEncoding(const std::vector<unsigned char> &vchSig, unsigned i
 struct PrecomputedTransactionData
 {
     // BIP341 precomputed data.
-    // These are single-SHA256, see https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki#cite_note-16.
+    // These are single-SHA256, see https://github.com/vincoin/bips/blob/master/bip-0341.mediawiki#cite_note-16.
     uint256 m_prevouts_single_hash;
     uint256 m_sequences_single_hash;
     uint256 m_outputs_single_hash;

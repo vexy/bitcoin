@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2022 The Bitcoin Core developers
+// Copyright (c) 2011-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #define BITCOIN_QT_OPTIONSMODEL_H
 
 #include <cstdint>
-#include <qt/bitcoinunits.h>
+#include <qt/vincoinunits.h>
 #include <qt/guiconstants.h>
 
 #include <QAbstractListModel>
@@ -33,7 +33,7 @@ static inline int PruneMiBtoGB(int64_t mib) { return (mib * 1024 * 1024 + GB_BYT
  */
 static inline int64_t PruneGBtoMiB(int gb) { return gb * GB_BYTES / 1024 / 1024; }
 
-/** Interface from Qt to configuration data structure for Bitcoin client.
+/** Interface from Qt to configuration data structure for Vincoin client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -59,7 +59,7 @@ public:
         ProxyUseTor,            // bool
         ProxyIPTor,             // QString
         ProxyPortTor,           // int
-        DisplayUnit,            // BitcoinUnit
+        DisplayUnit,            // VincoinUnit
         ThirdPartyTxUrls,       // QString
         Language,               // QString
         FontForMoney,           // FontChoice
@@ -101,7 +101,7 @@ public:
     bool getShowTrayIcon() const { return m_show_tray_icon; }
     bool getMinimizeToTray() const { return fMinimizeToTray; }
     bool getMinimizeOnClose() const { return fMinimizeOnClose; }
-    BitcoinUnit getDisplayUnit() const { return m_display_bitcoin_unit; }
+    VincoinUnit getDisplayUnit() const { return m_display_vincoin_unit; }
     QString getThirdPartyTxUrls() const { return strThirdPartyTxUrls; }
     QFont getFontForMoney() const;
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
@@ -128,7 +128,7 @@ private:
     bool fMinimizeToTray;
     bool fMinimizeOnClose;
     QString language;
-    BitcoinUnit m_display_bitcoin_unit;
+    VincoinUnit m_display_vincoin_unit;
     QString strThirdPartyTxUrls;
     FontChoice m_font_money{FontChoiceAbstract::EmbeddedFont};
     bool fCoinControlFeatures;
@@ -149,7 +149,7 @@ private:
     void checkAndMigrate();
 
 Q_SIGNALS:
-    void displayUnitChanged(BitcoinUnit unit);
+    void displayUnitChanged(VincoinUnit unit);
     void coinControlFeaturesChanged(bool);
     void showTrayIconChanged(bool);
     void fontForMoneyChanged(const QFont&);

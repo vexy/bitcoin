@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Copyright (c) 2018-2022 The Bitcoin Core developers
+# Copyright (c) 2018-2022 The Vincoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +16,7 @@ from subprocess import check_output
 HEADER_ID_PREFIX = 'BITCOIN_'
 HEADER_ID_SUFFIX = '_H'
 
-EXCLUDE_FILES_WITH_PREFIX = ['contrib/devtools/bitcoin-tidy',
+EXCLUDE_FILES_WITH_PREFIX = ['contrib/devtools/vincoin-tidy',
                              'src/crypto/ctaes',
                              'src/leveldb',
                              'src/crc32c',

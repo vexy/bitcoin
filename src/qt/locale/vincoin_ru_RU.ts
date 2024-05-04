@@ -58,13 +58,13 @@
         <translation type="unfinished">Гусь</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Это ваши Bitcoin-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой монет.</translation>
+        <source>These are your Vincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Это ваши Vincoin-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой монет.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Vincoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Это ваши адреса Bitcoin для получения платежей. Для создания новых адресов используйте кнопку "Создать новый адрес получения" на вкладке "Получение".
+        <translation type="unfinished">Это ваши адреса Vincoin для получения платежей. Для создания новых адресов используйте кнопку "Создать новый адрес получения" на вкладке "Получение".
 Подписание возможно только для адресов типа "legacy".</translation>
     </message>
     <message>
@@ -184,7 +184,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Введите старую и новую парольные фразы для кошелька.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your vincoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Помните, что шифрование кошелька не может полностью защитить ваши биткоины от кражи вредоносным ПО, заразившим ваш компьютер.</translation>
     </message>
     <message>
@@ -252,7 +252,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>VincoinApplication</name>
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Файл настроек %1 может быть поврежден или недействителен.</translation>
@@ -303,8 +303,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Сумма</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Введите адрес Bitcoin (например, %1)</translation>
+        <source>Enter a Vincoin address (e.g. %1)</source>
+        <translation type="unfinished">Введите адрес Vincoin (например, %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -412,7 +412,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Обзор</translation>
@@ -471,8 +471,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Прокси &lt;b&gt;включен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Отправляйте монеты на адрес Bitcoin</translation>
+        <source>Send coins to a Vincoin address</source>
+        <translation type="unfinished">Отправляйте монеты на адрес Vincoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -511,7 +511,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подписать &amp;сообщение…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Vincoin addresses to prove you own them</source>
         <translation type="unfinished">Подписывайте сообщения своими адресами биткойнов, чтобы доказать, что они вам принадлежат</translation>
     </message>
     <message>
@@ -519,8 +519,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Проверить сообщение…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Проверка сообщений на предмет того, что они были подписаны указанными адресами Bitcoin</translation>
+        <source>Verify messages to ensure they were signed with specified Vincoin addresses</source>
+        <translation type="unfinished">Проверка сообщений на предмет того, что они были подписаны указанными адресами Vincoin</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -579,8 +579,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подключение к узлам…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Запрос платежей (генерирует QR-коды и bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and vincoin: URIs)</source>
+        <translation type="unfinished">Запрос платежей (генерирует QR-коды и vincoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -631,7 +631,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Обновлено</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction</source>
+        <source>Load Partially Signed Vincoin Transaction</source>
         <translation type="unfinished">Загрузка частично подписанной транзакции биткойна</translation>
     </message>
     <message>
@@ -639,8 +639,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Загрузить PSBT из &amp;буфера обмена…</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
-        <translation type="unfinished">Загрузка частично подписанной транзакции Bitcoin из буфера обмена</translation>
+        <source>Load Partially Signed Vincoin Transaction from clipboard</source>
+        <translation type="unfinished">Загрузка частично подписанной транзакции Vincoin из буфера обмена</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -659,7 +659,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Адреса приема</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a vincoin: URI</source>
         <translation type="unfinished">Открыть биткойн: URI</translation>
     </message>
     <message>
@@ -697,8 +697,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Перенос кошелька</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation type="unfinished">Покажите сообщение справки %1, чтобы получить список возможных опций командной строки Bitcoin</translation>
+        <source>Show the %1 help message to get a list with possible Vincoin command-line options</source>
+        <translation type="unfinished">Покажите сообщение справки %1, чтобы получить список возможных опций командной строки Vincoin</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -753,12 +753,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Скрыть все группы</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n активное соединение(я) с сетью Bitcoin.</numerusform>
-            <numerusform>%n активное соединение(я) с сетью Bitcoin.</numerusform>
-            <numerusform>%n активное соединение(я) с сетью Bitcoin.</numerusform>
+            <numerusform>%n активное соединение(я) с сетью Vincoin.</numerusform>
+            <numerusform>%n активное соединение(я) с сетью Vincoin.</numerusform>
+            <numerusform>%n активное соединение(я) с сетью Vincoin.</numerusform>
         </translation>
     </message>
     <message>
@@ -1272,8 +1272,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Редактирование адреса отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">Введенный адрес "%1" не является действительным адресом Bitcoin.</translation>
+        <source>The entered address "%1" is not a valid Vincoin address.</source>
+        <translation type="unfinished">Введенный адрес "%1" не является действительным адресом Vincoin.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1318,7 +1318,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Vincoin</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
@@ -1367,8 +1367,8 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1будет скачано и сохранит копию цепи блоков Bitcoin.</translation>
+        <source>%1 will download and store a copy of the Vincoin block chain.</source>
+        <translation type="unfinished">%1будет скачано и сохранит копию цепи блоков Vincoin.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1460,11 +1460,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the vincoin network, as detailed below.</source>
         <translation type="unfinished">Последние транзакции могут быть еще не видны, и поэтому баланс вашего кошелька может быть неверным. Эта информация станет верной после того, как ваш кошелек завершит синхронизацию с сетью биткоина, как описано ниже.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend vincoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">Попытки потратить биткоины, затронутые еще не отображенными транзакциями, не будут приняты сетью.</translation>
     </message>
     <message>
@@ -1515,7 +1515,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open vincoin URI</source>
         <translation type="unfinished">Открытый URI биткойна</translation>
     </message>
     <message>
@@ -1671,16 +1671,16 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">&amp;Путь к сценарию внешнего подписывающего устройства</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Автоматически откройте порт клиента Bitcoin на маршрутизаторе. Это работает, только если ваш маршрутизатор поддерживает UPnP и он включен.</translation>
+        <source>Automatically open the Vincoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Автоматически откройте порт клиента Vincoin на маршрутизаторе. Это работает, только если ваш маршрутизатор поддерживает UPnP и он включен.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">Сопоставление портов с помощью &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">Автоматически откройте порт клиента Bitcoin на маршрутизаторе. Это работает только в том случае, если ваш маршрутизатор поддерживает NAT-PMP и он включен. Внешний порт может быть произвольным.</translation>
+        <source>Automatically open the Vincoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">Автоматически откройте порт клиента Vincoin на маршрутизаторе. Это работает только в том случае, если ваш маршрутизатор поддерживает NAT-PMP и он включен. Внешний порт может быть произвольным.</translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>
@@ -1695,8 +1695,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Подключитесь к сети Bitcoin через прокси-сервер SOCKS5.</translation>
+        <source>Connect to the Vincoin network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Подключитесь к сети Vincoin через прокси-сервер SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1775,8 +1775,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Показывать или нет функции управления монетами.</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Подключайтесь к сети Bitcoin через отдельный прокси-сервер SOCKS5 для луковых сервисов Tor.</translation>
+        <source>Connect to the Vincoin network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Подключайтесь к сети Vincoin через отдельный прокси-сервер SOCKS5 для луковых сервисов Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1880,7 +1880,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Vincoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Отображаемая информация может быть устаревшей. Ваш кошелек автоматически синхронизируется с сетью Биткойн после установления соединения, но этот процесс еще не завершен.</translation>
     </message>
     <message>
@@ -2095,16 +2095,16 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Ошибка запроса на оплату</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation type="unfinished">Не удаётся запустить обработчик click-to-pay для протокола bitcoin</translation>
+        <source>Cannot start vincoin: click-to-pay handler</source>
+        <translation type="unfinished">Не удаётся запустить обработчик click-to-pay для протокола vincoin</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">Работа с URI</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">'bitcoin://' не является правильным URI. Вместо этого используйте 'bitcoin:'.</translation>
+        <source>'vincoin://' is not a valid URI. Use 'vincoin:' instead.</source>
+        <translation type="unfinished">'vincoin://' не является правильным URI. Вместо этого используйте 'vincoin:'.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2115,8 +2115,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
 Если вы получаете эту ошибку, вам следует попросить продавца предоставить URI, совместимый с BIP21.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation type="unfinished">URI не может быть разобран! Это может быть вызвано недействительным адресом Bitcoin или неправильно сформированными параметрами URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Vincoin address or malformed URI parameters.</source>
+        <translation type="unfinished">URI не может быть разобран! Это может быть вызвано недействительным адресом Vincoin или неправильно сформированными параметрами URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2647,8 +2647,8 @@ For more information on using this console, type %6.
 <context>
     <name>ReceiveCoinsDialog</name>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation type="unfinished">Необязательное сообщение для прикрепления к платежному запросу, которое будет отображаться при открытии запроса. Примечание: Сообщение не будет отправлено вместе с платежом через сеть Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Vincoin network.</source>
+        <translation type="unfinished">Необязательное сообщение для прикрепления к платежному запросу, которое будет отображаться при открытии запроса. Примечание: Сообщение не будет отправлено вместе с платежом через сеть Vincoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2940,7 +2940,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 Примечание: Поскольку плата рассчитывается на основе каждого байта, ставка платы "100 сатоши за кб" для транзакции размером 500 виртуальных байт (половина 1 кб) в конечном итоге даст плату всего в 50 сатоши.</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for vincoin transactions than the network can process.</source>
         <translation type="unfinished">Когда объем транзакций меньше, чем место в блоках, майнеры, а также узлы ретрансляции могут установить минимальную плату. Платить только минимальную комиссию - это прекрасно, но имейте в виду, что это может привести к тому, что транзакция никогда не будет подтверждена, когда спрос на транзакции биткоина будет больше, чем может обработать сеть.</translation>
     </message>
     <message>
@@ -3018,7 +3018,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Установите путь к скрипту внешнего подписчика в меню Параметры -&gt; Кошелек</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Bitcoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Vincoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Создает частично подписанную транзакцию биткоина (PSBT) для использования, например, с офлайн-кошельком %1 или аппаратным кошельком, совместимым с PSBT.</translation>
     </message>
     <message>
@@ -3078,7 +3078,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы можете увеличить плату позже (сигналы Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Vincoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Пожалуйста, ознакомьтесь с вашим предложением по транзакции. В результате будет создана частично подписанная транзакция биткоина (PSBT), которую вы можете сохранить или скопировать, а затем подписать, например, с помощью офлайн-кошелька %1 или аппаратного кошелька, совместимого с PSBT.</translation>
     </message>
@@ -3088,7 +3088,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Хотите ли вы создать эту транзакцию?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Bitcoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Vincoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
         <translation type="unfinished">Пожалуйста, просмотрите вашу транзакцию. Вы можете создать и отправить эту транзакцию или создать частично подписанную транзакцию Биткойна (PSBT), которую вы можете сохранить или скопировать, а затем подписать, например, с помощью офлайн-кошелька %1 или аппаратного кошелька, совместимого с PSBT.</translation>
     </message>
@@ -3168,8 +3168,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Предупреждение: Недействительный адрес Bitcoin</translation>
+        <source>Warning: Invalid Vincoin address</source>
+        <translation type="unfinished">Предупреждение: Недействительный адрес Vincoin</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3199,8 +3199,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Выберите ранее использовавшийся адрес</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">Адрес Bitcoin для отправки платежа</translation>
+        <source>The Vincoin address to send the payment to</source>
+        <translation type="unfinished">Адрес Vincoin для отправки платежа</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -3215,7 +3215,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Сумма для отправки в выбранных единицах измерения</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less vincoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished">Комиссия будет вычтена из отправляемой суммы. Получатель получит меньше биткоинов, чем вы указали в поле "Сумма". Если выбрано несколько получателей, комиссия делится поровну.</translation>
     </message>
     <message>
@@ -3235,8 +3235,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите метку для этого адреса, чтобы добавить его в список используемых адресов</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation type="unfinished">Сообщение, прикрепленное к bitcoin: URI, которое будет сохранено вместе с транзакцией для справки. Примечание: Это сообщение не будет отправлено по сети Bitcoin.</translation>
+        <source>A message that was attached to the vincoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Vincoin network.</source>
+        <translation type="unfinished">Сообщение, прикрепленное к vincoin: URI, которое будет сохранено вместе с транзакцией для справки. Примечание: Это сообщение не будет отправлено по сети Vincoin.</translation>
     </message>
 </context>
 <context>
@@ -3261,12 +3261,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">&amp;Подписать сообщение</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive vincoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">Вы можете подписывать сообщения/соглашения со своими адресами, чтобы подтвердить, что можете получать отправленные на них биткоины. Будьте осторожны и не подписывайте ничего расплывчатого или случайного, так как фишинговые атаки могут попытаться обмануть вас, чтобы вы передали им свои данные. Подписывайте только полностью подробные заявления, с которыми вы согласны.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">Адрес Bitcoin для подписи сообщения</translation>
+        <source>The Vincoin address to sign the message with</source>
+        <translation type="unfinished">Адрес Vincoin для подписи сообщения</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3289,8 +3289,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Копирование текущей подписи в системный буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation type="unfinished">Подпишите сообщение, чтобы доказать, что вы являетесь владельцем этого адреса Bitcoin</translation>
+        <source>Sign the message to prove you own this Vincoin address</source>
+        <translation type="unfinished">Подпишите сообщение, чтобы доказать, что вы являетесь владельцем этого адреса Vincoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3313,8 +3313,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите адрес получателя, сообщение (убедитесь, что вы точно скопировали переносы строк, пробелы, табуляции и т. д.) и подпись ниже, чтобы проверить сообщение. Будьте осторожны и не читайте в подписи больше, чем содержится в самом подписанном сообщении, чтобы избежать обмана при атаке "человек посередине". Обратите внимание, что подпись подтверждает только получение адреса стороной, подписавшей сообщение, и не может служить доказательством отправки какой-либо транзакции!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">Bitcoin-адрес, которым было подписано сообщение</translation>
+        <source>The Vincoin address the message was signed with</source>
+        <translation type="unfinished">Vincoin-адрес, которым было подписано сообщение</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3325,8 +3325,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Подпись, поставленная при подписании сообщения</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Проверьте сообщение, чтобы убедиться, что оно было подписано указанным Bitcoin-адресом</translation>
+        <source>Verify the message to ensure it was signed with the specified Vincoin address</source>
+        <translation type="unfinished">Проверьте сообщение, чтобы убедиться, что оно было подписано указанным Vincoin-адресом</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3979,14 +3979,14 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Разработчики %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s поврежден. Попробуйте использовать инструмент кошелька bitcoin-wallet для спасения или восстановить резервную копию.</translation>
+        <source>%s corrupt. Try using the wallet tool vincoin-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s поврежден. Попробуйте использовать инструмент кошелька vincoin-wallet для спасения или восстановить резервную копию.</translation>
     </message>
     <message>
         <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate will be left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
@@ -4033,8 +4033,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Ошибка: Неверная запись идентификатора дамп-файла. Получено "%s", ожидалось "%s".</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Ошибка: Версия дампфайла не поддерживается. Эта версия bitcoin-кошелька поддерживает только дампфайлы версии 1. Получен дампфайл с версией %s</translation>
+        <source>Error: Dumpfile version is not supported. This version of vincoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Ошибка: Версия дампфайла не поддерживается. Эта версия vincoin-кошелька поддерживает только дампфайлы версии 1. Получен дампфайл с версией %s</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>

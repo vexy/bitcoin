@@ -1,4 +1,4 @@
-// Copyright (c) 2022 The Bitcoin Core developers
+// Copyright (c) 2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +11,7 @@
 
 namespace kernel {
 //! Context struct holding the kernel library's logically global state, and
-//! passed to external libbitcoin_kernel functions which need access to this
+//! passed to external libvincoin_kernel functions which need access to this
 //! state. The kernel library API is a work in progress, so state organization
 //! and member list will evolve over time.
 //!

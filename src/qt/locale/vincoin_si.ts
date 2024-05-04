@@ -58,7 +58,7 @@
         <translation type="unfinished">තෝ&amp;රන්න</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Vincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">මේ ඔබගේ ගෙවීම් යැවීම සඳහා වන බිට්කොයින් ලිපින වේ. කාසි යැවීමට පෙර සෑම විටම මුදල සහ ලැබීමේ ලිපිනය පරීක්‍ෂා කරන්න.</translation>
     </message>
     <message>
@@ -166,7 +166,7 @@
         <translation type="unfinished">පසුම්බිය සඳහා පැරණි මුරපදය සහ නව මුරපදය ඇතුළත් කරන්න.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your vincoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">ඔබේ මුදල් පසුම්බිය සංකේතනය කිරීමෙන් ඔබේ පරිගණකයට අනිෂ්ට මෘදුකාංග (malware) ඇතුලු වීමෙන් කෙරෙන බිට්කොයින් සොරකම් කිරීම් වලින් සම්පූර්ණයෙන්ම වැළැක්වීම කළ නොහැකි බව මතක තබා ගන්න.</translation>
     </message>
     <message>
@@ -215,7 +215,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>VincoinApplication</name>
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">සැකසීම් ගොනුව %1 දූෂිත හෝ අවලංගු විය හැක.</translation>
@@ -296,7 +296,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;දළ විශ්ලේෂණය</translation>
@@ -347,7 +347,7 @@
         <translation type="unfinished">ජාලයේ ක්‍රියාකාරකම අබල කර ඇත.</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Vincoin address</source>
         <translation type="unfinished">බිට්කොයින් ලිපිනයකට කාසි යවන්න</translation>
     </message>
     <message>
@@ -494,11 +494,11 @@
         <translation type="unfinished">පෙ&amp;න්වන්න</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
-            <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
+            <numerusform>%n active connection(s) to Vincoin network.</numerusform>
+            <numerusform>%n active connection(s) to Vincoin network.</numerusform>
         </translation>
     </message>
     <message>
@@ -733,7 +733,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Vincoin</source>
         <translation type="unfinished">බිට්කොයින්</translation>
     </message>
     <message numerus="yes">
@@ -1273,7 +1273,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">%s සංවර්ධකයින්</translation>

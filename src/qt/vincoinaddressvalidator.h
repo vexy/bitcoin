@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2020 The Bitcoin Core developers
+// Copyright (c) 2011-2020 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,24 +10,24 @@
 /** Base58 entry widget validator, checks for valid characters and
  * removes some whitespace.
  */
-class BitcoinAddressEntryValidator : public QValidator
+class VincoinAddressEntryValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinAddressEntryValidator(QObject *parent);
+    explicit VincoinAddressEntryValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const override;
 };
 
-/** Bitcoin address widget validator, checks for a valid bitcoin address.
+/** Vincoin address widget validator, checks for a valid vincoin address.
  */
-class BitcoinAddressCheckValidator : public QValidator
+class VincoinAddressCheckValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinAddressCheckValidator(QObject *parent);
+    explicit VincoinAddressCheckValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const override;
 };

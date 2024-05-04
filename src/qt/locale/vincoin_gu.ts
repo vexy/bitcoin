@@ -58,11 +58,11 @@
         <translation type="unfinished">&amp; પસંદ કરો</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Vincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">આ તમારા ચુકવણી કરવા માટે ના સરનામાં છે, હંમેશા કિંમત અને મોકલવાના ના સરનામાં ચકાસી લેવા સિક્કા આપતા પહેલા.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Vincoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">આ તમારુ ચૂકવણું લેવા માટે નું સરનામા છે. નવું સરનામું બનાવા માટે "મેળવવા" માટે ની ટેબ માં "ચૂકવણું લેવા માટે નવું સરનામુ બનાવો" બટન વાપરો.
 ડિજિટલી સહી કરવા માટે 'legacy એટલેકે જુના પ્રકાર નુ' પ્રકાર નું સરનામું હોવું જરૂરી છે.</translation>
@@ -236,7 +236,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>Create a new wallet</source>
         <translation type="unfinished">નવું વૉલેટ બનાવો</translation>
@@ -249,7 +249,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

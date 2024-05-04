@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-2022 The Bitcoin Core developers
+# Copyright (c) 2017-2022 The Vincoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test mempool acceptance of raw transactions."""
@@ -8,7 +8,7 @@ from copy import deepcopy
 from decimal import Decimal
 import math
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import VincoinTestFramework
 from test_framework.messages import (
     MAX_BIP125_RBF_SEQUENCE,
     COIN,
@@ -46,7 +46,7 @@ from test_framework.wallet import MiniWallet
 from test_framework.wallet_util import generate_keypair
 
 
-class MempoolAcceptanceTest(BitcoinTestFramework):
+class MempoolAcceptanceTest(VincoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [[

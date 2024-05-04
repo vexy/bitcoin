@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2022 The Bitcoin Core developers
+// Copyright (c) 2009-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -122,7 +122,7 @@ struct Params {
     uint256 defaultAssumeValid;
 
     /**
-     * If true, witness commitments contain a payload equal to a Bitcoin Script solution
+     * If true, witness commitments contain a payload equal to a Vincoin Script solution
      * to the signet challenge. See BIP325.
      */
     bool signet_blocks{false};

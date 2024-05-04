@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Bitcoin Developers
+// Copyright (c) 2023 Vincoin Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 
 #include <clang-tidy/ClangTidyCheck.h>
 
-namespace bitcoin {
+namespace vincoin {
 
 // Warn about any use of LogPrintf that does not end with a newline.
 class LogPrintfCheck final : public clang::tidy::ClangTidyCheck
@@ -24,6 +24,6 @@ public:
     void check(const clang::ast_matchers::MatchFinder::MatchResult& Result) override;
 };
 
-} // namespace bitcoin
+} // namespace vincoin
 
 #endif // LOGPRINTF_CHECK_H

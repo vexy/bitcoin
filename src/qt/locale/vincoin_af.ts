@@ -10,10 +10,10 @@
         <translation type="unfinished">Skep ’n nuwe adres</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Vincoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">
-Hierdie is die adresse waar u Bitcoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+Hierdie is die adresse waar u Vincoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>Sending addresses - %1</source>
@@ -40,7 +40,7 @@ Hierdie is die adresse waar u Bitcoins sal ontvang. Ons beveel aan dat u 'n nuwe
     </message>
     </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>VincoinApplication</name>
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Instellingslêer %1 kan korrup of ongeldig wees.</translation>
@@ -104,7 +104,7 @@ Hierdie is die adresse waar u Bitcoins sal ontvang. Ons beveel aan dat u 'n nuwe
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
         <translation type="unfinished">
@@ -141,11 +141,11 @@ Hierdie is die adresse waar u Bitcoins sal ontvang. Ons beveel aan dat u 'n nuwe
         <translation type="unfinished">Herstel beursie</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
-            <numerusform>%n active connection(s) to Bitcoin network.</numerusform>
+            <numerusform>%n active connection(s) to Vincoin network.</numerusform>
+            <numerusform>%n active connection(s) to Vincoin network.</numerusform>
         </translation>
     </message>
     <message>
@@ -481,7 +481,7 @@ Die migrasieproses sal 'n rugsteun van die beursie skep voordat dit migreer. Hie
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate will be left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
         <translation type="unfinished">%s ailed om die -assumeutxo momentopname toestand te bekragtig. Dit dui op 'n hardeware probleem, of 'n fout in die sagteware, of 'n slegte sagteware wysiging wat toegelaat het dat 'n ongeldige momentopname gelaai word. As gevolg hiervan sal die nodus afskakel en ophou om enige toestand te gebruik wat op die momentopname gebou is, en die kettinghoogte vanaf%d aan %d. Met die volgende herbegin, sal die nodus hervat sinkronisering vanaf %d sonder om enige foto-data te gebruik. Rapporteer asseblief hierdie voorval by %s, insluitend hoe jy die momentopname gekry het. Die ongeldige momentopname-kettingtoestand sal op skyf gelaat word ingeval dit nuttig is om die probleem te diagnoseer wat hierdie fout veroorsaak het.</translation>

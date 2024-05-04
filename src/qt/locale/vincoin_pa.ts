@@ -58,11 +58,11 @@
         <translation type="unfinished">ਚੁਣੋ </translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Vincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">ਇਹ ਭੁਗਤਾਨ ਭੇਜਣ ਲਈ ਤੁਹਾਡੇ ਬਿਟਕੋਇਨ ਪਤੇ ਹਨ। ਸਿੱਕੇ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਹਮੇਸ਼ਾਂ ਰਕਮ ਅਤੇ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਪਤੇ ਦੀ ਜਾਂਚ ਕਰੋ।</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Vincoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ਏਹ ਤੁਹਾਡੇ ਰਕਮ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਬਿਟਕਾਅਨ ਪਤੇ ਹਨ। ਪ੍ਰਾਪਤੀ ਟੈਬ ਤੇ ਨਵੇਂ ਪਤੇ ਦਰਜ ਕਰਨ ਲਈ "ਨਵਾਂ ਪ੍ਰਾਪਤੀ ਪਤਾ ਦਰਜ ਕਰੋ" ਬਟਨ ਤੇ ਟੈਪ ਕਰੋ। ਜੁੜਨ ਲਈ "ਲੈਗਸੀ" ਪ੍ਰਕਾਰ ਦੇ ਹੀ ਪਤੇ ਦਰਜ ਕੀਤੇ ਜਾਂ ਸਕਦੇ ਹਨ। </translation>
     </message>
@@ -196,7 +196,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>VincoinApplication</name>
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">ਇੱਕ ਘਾਤਕ ਗਲਤੀ ਆਈ ਹੈ। %1ਹੁਣ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਜਾਰੀ ਨਹੀਂ ਰਹਿ ਸਕਦਾ ਹੈ ਅਤੇ ਛੱਡ ਦੇਵੇਗਾ।</translation>
@@ -256,7 +256,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;ਓਵਰਵਿਊ</translation>
@@ -282,7 +282,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ਬਟੂਆ: </translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Vincoin address</source>
         <translation type="unfinished">ਬਿਟਕੋਇਨ ਪਤੇ 'ਤੇ ਸਿੱਕੇ ਭੇਜੋ</translation>
     </message>
     <message>
@@ -325,7 +325,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -476,7 +476,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">ਸੈਟਿੰਗ ਫਾਈਲ ਨੂੰ ਪੜ੍ਹਨ ਵਿੱਚ ਅਸਫਲ</translation>

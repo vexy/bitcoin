@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2022 The Bitcoin Core developers
+// Copyright (c) 2011-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -6,7 +6,7 @@
 #define BITCOIN_QT_BITCOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/vincoin-config.h>
 #endif
 
 #include <interfaces/node.h>
@@ -18,7 +18,7 @@
 
 #include <QApplication>
 
-class BitcoinGUI;
+class VincoinGUI;
 class ClientModel;
 class NetworkStyle;
 class OptionsModel;
@@ -32,13 +32,13 @@ class Init;
 } // namespace interfaces
 
 
-/** Main Bitcoin application object */
-class BitcoinApplication: public QApplication
+/** Main Vincoin application object */
+class VincoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit BitcoinApplication();
-    ~BitcoinApplication();
+    explicit VincoinApplication();
+    ~VincoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -62,7 +62,7 @@ public:
     /// Request core initialization
     void requestInitialize();
 
-    /// Get window identifier of QMainWindow (BitcoinGUI)
+    /// Get window identifier of QMainWindow (VincoinGUI)
     WId getMainWinId() const;
 
     /// Setup platform style
@@ -86,7 +86,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
-    void windowShown(BitcoinGUI* window);
+    void windowShown(VincoinGUI* window);
 
 protected:
     bool event(QEvent* e) override;
@@ -95,7 +95,7 @@ private:
     std::optional<InitExecutor> m_executor;
     OptionsModel* optionsModel{nullptr};
     ClientModel* clientModel{nullptr};
-    BitcoinGUI* window{nullptr};
+    VincoinGUI* window{nullptr};
     QTimer* pollShutdownTimer{nullptr};
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer{nullptr};

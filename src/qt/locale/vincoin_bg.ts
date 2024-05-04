@@ -58,11 +58,11 @@
         <translation type="unfinished">Избери</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Vincoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Тези са вашите Биткойн адреси за изпращане на плащания. Винаги проверявайте количеството и получаващите адреси преди изпращане на монети. </translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Vincoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Това са вашите биткойн адреси за получаване на плащания. Използвайте бутона „Създаване на нови адреси“ в раздела за получаване, за да създадете нови адреси. Подписването е възможно само с адреси от типа „наследени“.</translation>
     </message>
@@ -175,7 +175,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Въведете старата и новата паролна фраза за портфейла.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your vincoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Не забравяйте, че криптирането на вашия портфейл не може напълно да защити вашите биткойни от кражба от зловреден софтуер, заразяващ компютъра ви.</translation>
     </message>
     <message>
@@ -239,7 +239,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>VincoinApplication</name>
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Файлът с настройки %1 може да е повреден или невалиден.</translation>
@@ -290,7 +290,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Количество</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a Vincoin address (e.g. %1)</source>
         <translation type="unfinished">Въведете Биткойн адрес (например: %1)</translation>
     </message>
     <message>
@@ -391,7 +391,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">Преглед</translation>
@@ -458,7 +458,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Прокси е &lt;b&gt;разрешено&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Vincoin address</source>
         <translation type="unfinished">Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -502,7 +502,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подпиши &amp;съобщение…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Vincoin addresses to prove you own them</source>
         <translation type="unfinished">Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
@@ -510,7 +510,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Потвърди съобщение…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Vincoin addresses</source>
         <translation type="unfinished">Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
@@ -570,7 +570,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Свързване с рояк...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and vincoin: URIs)</source>
         <translation type="unfinished">Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
     </message>
     <message>
@@ -629,16 +629,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ctrl+Q </translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction</source>
-        <translation type="unfinished">Заредете частично подписана Bitcoin трансакция</translation>
+        <source>Load Partially Signed Vincoin Transaction</source>
+        <translation type="unfinished">Заредете частично подписана Vincoin трансакция</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
         <translation type="unfinished">Заредете PSBT от &amp;клипборд...</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
-        <translation type="unfinished">Заредете частично подписана Bitcoin трансакция от клипборд</translation>
+        <source>Load Partially Signed Vincoin Transaction from clipboard</source>
+        <translation type="unfinished">Заредете частично подписана Vincoin трансакция от клипборд</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -657,8 +657,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Получаване на адреси</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Отвори bitcoin: URI</translation>
+        <source>Open a vincoin: URI</source>
+        <translation type="unfinished">Отвори vincoin: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -687,7 +687,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Затвори всички портфейли</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Vincoin command-line options</source>
         <translation type="unfinished">Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
     </message>
     <message>
@@ -755,10 +755,10 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Покажи</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n свързани активно към Bitcoin мрежата.</numerusform>
+            <numerusform>%n свързани активно към Vincoin мрежата.</numerusform>
             <numerusform>%n активно свързани към Биткойн мрежата. </numerusform>
         </translation>
     </message>
@@ -1214,7 +1214,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid Vincoin address.</source>
         <translation type="unfinished">"%1" не е валиден Биткоин адрес.</translation>
     </message>
     <message>
@@ -1260,7 +1260,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Vincoin</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
@@ -1301,7 +1301,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
+        <source>%1 will download and store a copy of the Vincoin block chain.</source>
         <translation type="unfinished">%1 ще свали и съхрани копие на биткойн блокчейна.</translation>
     </message>
     <message>
@@ -1390,11 +1390,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation type="unfinished">Последните трансакции все още не могат да се виждат и следователно балансът на портфейла ви може да бъде неправилен. Тази информация ще бъде правилна, след като портфейлът ви приключи синхронизирането с Bitcoin мрежата, както е подробно описано по-долу.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the vincoin network, as detailed below.</source>
+        <translation type="unfinished">Последните трансакции все още не могат да се виждат и следователно балансът на портфейла ви може да бъде неправилен. Тази информация ще бъде правилна, след като портфейлът ви приключи синхронизирането с Vincoin мрежата, както е подробно описано по-долу.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend vincoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">Опитът да се изразходват биткойни, които са засегнати от все още показаните трансакции, няма да бъдат приети от мрежата.</translation>
     </message>
     <message>
@@ -1445,8 +1445,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
-        <translation type="unfinished">Отвори bitcoin URI </translation>
+        <source>Open vincoin URI</source>
+        <translation type="unfinished">Отвори vincoin URI </translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1601,8 +1601,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Външен път на скрипта на подписващия</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Автоматично отваряне на входящия Bitcoin порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the Vincoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Автоматично отваряне на входящия Vincoin порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1617,7 +1617,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Позволи входящи връзки</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Vincoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished">Свързване с Биткойн мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
@@ -1749,7 +1749,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Vincoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -1831,7 +1831,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start vincoin: click-to-pay handler</source>
         <translation type="unfinished">Биткойн не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
@@ -2385,7 +2385,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Vincoin address</source>
         <translation type="unfinished">Внимание: Невалиден Биткойн адрес</translation>
     </message>
     <message>
@@ -2463,7 +2463,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Vincoin address</source>
         <translation type="unfinished">Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -2479,7 +2479,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Vincoin address</source>
         <translation type="unfinished">Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>
@@ -2928,7 +2928,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>vincoin-core</name>
     <message>
         <source>Config setting for %s only applied on %s network when in [%s] section.</source>
         <translation type="unfinished">Конфигурирай настройки за %s само когато са приложени на %s мрежа, когато са в [%s] секция.</translation>

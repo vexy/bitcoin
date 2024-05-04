@@ -1,13 +1,13 @@
-# Vincoin ~ The [Bitcoin](https://github.com/bitcoin/bitcoin) Experiment
-Back in 2019, at the dawn of "_cryptocurrencies_" and other faulty Bitcoin implementations, the idea of **Vincoin** emerged.  
+# Vincoin ~ The [Vincoin](https://github.com/vincoin/vincoin) Experiment
+Back in 2019, at the dawn of "_cryptocurrencies_" and other faulty Vincoin implementations, the idea of **Vincoin** emerged.  
 
-It is imagined to expand Bitcoin basic functionalities and allow huge group(s) of people get better understanding, access and usage of this technology. 
+It is imagined to expand Vincoin basic functionalities and allow huge group(s) of people get better understanding, access and usage of this technology. 
 
 Most importantly, every user is guaranteed equal amount of coins upon registration, **free of charge**.
 
 
 ## Key differences
-_Vincoin_ is mostly based on Bitcoin features (regular fork), but has major key differences:
+_Vincoin_ is mostly based on Vincoin features (regular fork), but has major key differences:
 - total amount of coins in circulation
 - initial amout of coins every user is guaranteed with
 - restricted, non-public access (zKP based)

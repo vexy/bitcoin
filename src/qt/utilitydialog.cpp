@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2022 The Bitcoin Core developers
+// Copyright (c) 2011-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/vincoin-config.h>
 #endif
 
 #include <qt/utilitydialog.h>
@@ -58,8 +58,8 @@ HelpMessageDialog::HelpMessageDialog(QWidget *parent, bool about) :
         ui->helpMessage->setVisible(false);
     } else {
         setWindowTitle(tr("Command-line options"));
-        QString header = "Usage: bitcoin-qt [command-line options] [URI]\n\n"
-                         "Optional URI is a Bitcoin address in BIP21 URI format.\n";
+        QString header = "Usage: vincoin-qt [command-line options] [URI]\n\n"
+                         "Optional URI is a Vincoin address in BIP21 URI format.\n";
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();

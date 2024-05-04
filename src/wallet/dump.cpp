@@ -1,4 +1,4 @@
-// Copyright (c) 2020-2022 The Bitcoin Core developers
+// Copyright (c) 2020-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -104,7 +104,7 @@ bool DumpWallet(const ArgsManager& args, WalletDatabase& db, bilingual_str& erro
 }
 
 // The standard wallet deleter function blocks on the validation interface
-// queue, which doesn't exist for the bitcoin-wallet. Define our own
+// queue, which doesn't exist for the vincoin-wallet. Define our own
 // deleter here.
 static void WalletToolReleaseWallet(CWallet* wallet)
 {
@@ -152,7 +152,7 @@ bool CreateFromDump(const ArgsManager& args, const std::string& name, const fs::
         return false;
     }
     if (ver != DUMP_VERSION) {
-        error = strprintf(_("Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s"), version_value);
+        error = strprintf(_("Error: Dumpfile version is not supported. This version of vincoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s"), version_value);
         dump_file.close();
         return false;
     }

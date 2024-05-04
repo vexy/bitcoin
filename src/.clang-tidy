@@ -1,6 +1,6 @@
 Checks: '
 -*,
-bitcoin-*,
+vincoin-*,
 bugprone-argument-comment,
 bugprone-string-constructor,
 bugprone-use-after-move,

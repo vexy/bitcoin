@@ -71,7 +71,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VincoinGUI</name>
     <message>
         <source>&amp;Send</source>
         <translation type="unfinished">موڪليو</translation>
@@ -88,7 +88,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Vincoin network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -124,7 +124,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Vincoin</source>
         <translation type="unfinished">بٽڪوائن</translation>
     </message>
     <message numerus="yes">

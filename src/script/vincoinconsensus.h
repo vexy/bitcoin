@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@
 #include <stdint.h>
 
 #if defined(BUILD_BITCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/vincoin-config.h>
   #if defined(_WIN32)
     #if defined(HAVE_DLLEXPORT_ATTRIBUTE)
       #define EXPORT_SYMBOL __declspec(dllexport)
@@ -33,33 +33,33 @@ extern "C" {
 
 #define BITCOINCONSENSUS_API_VER 2
 
-typedef enum bitcoinconsensus_error_t
+typedef enum vincoinconsensus_error_t
 {
-    bitcoinconsensus_ERR_OK = 0,
-    bitcoinconsensus_ERR_TX_INDEX,
-    bitcoinconsensus_ERR_TX_SIZE_MISMATCH,
-    bitcoinconsensus_ERR_TX_DESERIALIZE,
-    bitcoinconsensus_ERR_AMOUNT_REQUIRED,
-    bitcoinconsensus_ERR_INVALID_FLAGS,
-    bitcoinconsensus_ERR_SPENT_OUTPUTS_REQUIRED,
-    bitcoinconsensus_ERR_SPENT_OUTPUTS_MISMATCH
-} bitcoinconsensus_error;
+    vincoinconsensus_ERR_OK = 0,
+    vincoinconsensus_ERR_TX_INDEX,
+    vincoinconsensus_ERR_TX_SIZE_MISMATCH,
+    vincoinconsensus_ERR_TX_DESERIALIZE,
+    vincoinconsensus_ERR_AMOUNT_REQUIRED,
+    vincoinconsensus_ERR_INVALID_FLAGS,
+    vincoinconsensus_ERR_SPENT_OUTPUTS_REQUIRED,
+    vincoinconsensus_ERR_SPENT_OUTPUTS_MISMATCH
+} vincoinconsensus_error;
 
 /** Script verification flags */
 enum
 {
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS             = (1U << 11), // enable WITNESS (BIP141)
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_TAPROOT             = (1U << 17), // enable TAPROOT (BIPs 341 & 342)
-    bitcoinconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = bitcoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH | bitcoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
-                                                               bitcoinconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | bitcoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
-                                                               bitcoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY | bitcoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS |
-                                                               bitcoinconsensus_SCRIPT_FLAGS_VERIFY_TAPROOT
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_NONE                = 0,
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH                = (1U << 0), // evaluate P2SH (BIP16) subscripts
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG              = (1U << 2), // enforce strict DER (BIP66) compliance
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY           = (1U << 4), // enforce NULLDUMMY (BIP147)
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY = (1U << 9), // enable CHECKLOCKTIMEVERIFY (BIP65)
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY = (1U << 10), // enable CHECKSEQUENCEVERIFY (BIP112)
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS             = (1U << 11), // enable WITNESS (BIP141)
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_TAPROOT             = (1U << 17), // enable TAPROOT (BIPs 341 & 342)
+    vincoinconsensus_SCRIPT_FLAGS_VERIFY_ALL                 = vincoinconsensus_SCRIPT_FLAGS_VERIFY_P2SH | vincoinconsensus_SCRIPT_FLAGS_VERIFY_DERSIG |
+                                                               vincoinconsensus_SCRIPT_FLAGS_VERIFY_NULLDUMMY | vincoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKLOCKTIMEVERIFY |
+                                                               vincoinconsensus_SCRIPT_FLAGS_VERIFY_CHECKSEQUENCEVERIFY | vincoinconsensus_SCRIPT_FLAGS_VERIFY_WITNESS |
+                                                               vincoinconsensus_SCRIPT_FLAGS_VERIFY_TAPROOT
 };
 
 typedef struct {
@@ -72,20 +72,20 @@ typedef struct {
 /// txTo correctly spends the scriptPubKey pointed to by scriptPubKey under
 /// the additional constraints specified by flags.
 /// If not nullptr, err will contain an error/success code for the operation
-EXPORT_SYMBOL int bitcoinconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
+EXPORT_SYMBOL int vincoinconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
                                                  const unsigned char *txTo        , unsigned int txToLen,
-                                                 unsigned int nIn, unsigned int flags, bitcoinconsensus_error* err);
+                                                 unsigned int nIn, unsigned int flags, vincoinconsensus_error* err);
 
-EXPORT_SYMBOL int bitcoinconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
+EXPORT_SYMBOL int vincoinconsensus_verify_script_with_amount(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, bitcoinconsensus_error* err);
+                                    unsigned int nIn, unsigned int flags, vincoinconsensus_error* err);
 
-EXPORT_SYMBOL int bitcoinconsensus_verify_script_with_spent_outputs(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
+EXPORT_SYMBOL int vincoinconsensus_verify_script_with_spent_outputs(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen, int64_t amount,
                                     const unsigned char *txTo        , unsigned int txToLen,
                                     const UTXO *spentOutputs, unsigned int spentOutputsLen,
-                                    unsigned int nIn, unsigned int flags, bitcoinconsensus_error* err);
+                                    unsigned int nIn, unsigned int flags, vincoinconsensus_error* err);
 
-EXPORT_SYMBOL unsigned int bitcoinconsensus_version();
+EXPORT_SYMBOL unsigned int vincoinconsensus_version();
 
 #ifdef __cplusplus
 } // extern "C"

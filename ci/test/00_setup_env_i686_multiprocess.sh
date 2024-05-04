@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2020-present The Bitcoin Core developers
+# Copyright (c) 2020-present The Vincoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,4 +14,4 @@ export DEP_OPTS="DEBUG=1 MULTIPROCESS=1"
 export GOAL="install"
 export BITCOIN_CONFIG="--enable-debug CC='clang -m32' CXX='clang++ -m32' \
 CPPFLAGS='-DBOOST_MULTI_INDEX_ENABLE_SAFE_MODE'"
-export BITCOIND=bitcoin-node  # Used in functional tests
+export BITCOIND=vincoin-node  # Used in functional tests
