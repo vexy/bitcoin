@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NOUI_H
-#define BITCOIN_NOUI_H
+#ifndef VINCOIN_NOUI_H
+#define VINCOIN_NOUI_H
 
 #include <string>
 
@@ -25,4 +25,4 @@ void noui_test_redirect();
 /** Reconnects the regular Non-GUI handlers after having used noui_test_redirect */
 void noui_reconnect();
 
-#endif // BITCOIN_NOUI_H
+#endif // VINCOIN_NOUI_H

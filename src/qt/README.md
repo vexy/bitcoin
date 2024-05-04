@@ -61,7 +61,7 @@ To run:
 
 * UI elements like VincoinAmountField, which inherit from QWidget.
 * `vincoinstrings.cpp`: automatically generated
-* `vincoinunits.(h/cpp)`: BTC / mBTC / etc. handling
+* `vincoinunits.(h/cpp)`: VNC / mVNC / etc. handling
 * `callback.h`
 * `guiconstants.h`: UI colors, app name, etc.
 * `guiutil.h`: several helper functions

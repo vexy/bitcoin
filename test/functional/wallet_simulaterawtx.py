@@ -73,7 +73,7 @@ class SimulateTxTest(VincoinTestFramework):
         tx1changepos = funding["changepos"]
         vincoin_fee = Decimal(funding["fee"])
 
-        # w0 sees fee + 5 btc decrease, w2 sees + 5 btc
+        # w0 sees fee + 5 vnc decrease, w2 sees + 5 vnc
         assert_approx(w0.simulaterawtransaction([tx1])["balance_change"], -(Decimal("5") + vincoin_fee))
         assert_approx(w2.simulaterawtransaction([tx1])["balance_change"], Decimal("5"))
 

@@ -56,8 +56,8 @@ D'Signatur ass nëmmen mat Adressen vum Typ 'legacy' méiglech.</translation>
 <context>
     <name>AskPassphraseDialog</name>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Warnung: Wann Dir Är Portemonnaie verschlësselt an Äert Passwort verléiert, da verléiert Dir 1ALLE ÄRE BITCOINS1!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VINCOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Warnung: Wann Dir Är Portemonnaie verschlësselt an Äert Passwort verléiert, da verléiert Dir 1ALLE ÄRE VINCOINS1!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

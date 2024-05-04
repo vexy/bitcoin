@@ -125,7 +125,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = GUIUtil::TextWidth(fm, VincoinUnits::format(VincoinUnit::BTC, VincoinUnits::maxMoney(), false, VincoinUnits::SeparatorStyle::ALWAYS));
+            int w = GUIUtil::TextWidth(fm, VincoinUnits::format(VincoinUnit::VNC, VincoinUnits::maxMoney(), false, VincoinUnits::SeparatorStyle::ALWAYS));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -150,7 +150,7 @@ public:
     }
 
 private:
-    VincoinUnit currentUnit{VincoinUnit::BTC};
+    VincoinUnit currentUnit{VincoinUnit::VNC};
     CAmount singleStep{CAmount(100000)}; // satoshis
     mutable QSize cachedMinimumSizeHint;
     bool m_allow_empty{true};

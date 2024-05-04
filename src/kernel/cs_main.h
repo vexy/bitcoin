@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_KERNEL_CS_MAIN_H
-#define BITCOIN_KERNEL_CS_MAIN_H
+#ifndef VINCOIN_KERNEL_CS_MAIN_H
+#define VINCOIN_KERNEL_CS_MAIN_H
 
 #include <sync.h>
 
@@ -19,4 +19,4 @@
  */
 extern RecursiveMutex cs_main;
 
-#endif // BITCOIN_KERNEL_CS_MAIN_H
+#endif // VINCOIN_KERNEL_CS_MAIN_H

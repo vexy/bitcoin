@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAINPARAMSBASE_H
-#define BITCOIN_CHAINPARAMSBASE_H
+#ifndef VINCOIN_CHAINPARAMSBASE_H
+#define VINCOIN_CHAINPARAMSBASE_H
 
 #include <util/chaintype.h>
 
@@ -52,4 +52,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given chain. */
 void SelectBaseParams(const ChainType chain);
 
-#endif // BITCOIN_CHAINPARAMSBASE_H
+#endif // VINCOIN_CHAINPARAMSBASE_H

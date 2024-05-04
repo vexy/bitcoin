@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_PUBKEY_H
-#define BITCOIN_PUBKEY_H
+#ifndef VINCOIN_PUBKEY_H
+#define VINCOIN_PUBKEY_H
 
 #include <hash.h>
 #include <serialize.h>
@@ -373,4 +373,4 @@ struct CExtPubKey {
     [[nodiscard]] bool Derive(CExtPubKey& out, unsigned int nChild) const;
 };
 
-#endif // BITCOIN_PUBKEY_H
+#endif // VINCOIN_PUBKEY_H

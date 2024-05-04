@@ -58,17 +58,17 @@ bench_bench_vincoin_SOURCES = \
 
 nodist_bench_bench_vincoin_SOURCES = $(GENERATED_BENCH_FILES)
 
-bench_bench_vincoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_vincoin_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
 bench_bench_vincoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 bench_bench_vincoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 bench_bench_vincoin_LDADD = \
   $(LIBTEST_UTIL) \
-  $(LIBBITCOIN_NODE) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBVINCOIN_NODE) \
+  $(LIBVINCOIN_WALLET) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1) \
@@ -79,7 +79,7 @@ bench_bench_vincoin_LDADD = \
   $(NATPMP_LIBS)
 
 if ENABLE_ZMQ
-bench_bench_vincoin_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+bench_bench_vincoin_LDADD += $(LIBVINCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
@@ -93,9 +93,9 @@ bench_bench_vincoin_SOURCES += bench/wallet_ismine.cpp
 bench_bench_vincoin_LDADD += $(BDB_LIBS) $(SQLITE_LIBS)
 endif
 
-CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
+CLEAN_VINCOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_BENCH_FILES)
 
-CLEANFILES += $(CLEAN_BITCOIN_BENCH)
+CLEANFILES += $(CLEAN_VINCOIN_BENCH)
 
 bench/data.cpp: bench/data/block413567.raw.h
 
@@ -105,4 +105,4 @@ bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
 vincoin_bench_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_BENCH) $(bench_bench_vincoin_OBJECTS) $(BENCH_BINARY)
+	rm -f $(CLEAN_VINCOIN_BENCH) $(bench_bench_vincoin_OBJECTS) $(BENCH_BINARY)

@@ -39,10 +39,10 @@ class CreateWalletWatchonlyTest(VincoinTestFramework):
         wo_wallet.importpubkey(pubkey=def_wallet.getaddressinfo(wo_addr)['pubkey'])
         wo_wallet.importpubkey(pubkey=def_wallet.getaddressinfo(wo_change)['pubkey'])
 
-        # generate some btc for testing
+        # generate some vnc for testing
         self.generatetoaddress(node, COINBASE_MATURITY + 1, a1)
 
-        # send 1 btc to our watch-only address
+        # send 1 vnc to our watch-only address
         txid = def_wallet.sendtoaddress(wo_addr, 1)
         self.generate(self.nodes[0], 1)
 

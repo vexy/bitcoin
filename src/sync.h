@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SYNC_H
-#define BITCOIN_SYNC_H
+#ifndef VINCOIN_SYNC_H
+#define VINCOIN_SYNC_H
 
 #ifdef DEBUG_LOCKCONTENTION
 #include <logging.h>
@@ -427,4 +427,4 @@ public:
     }
 };
 
-#endif // BITCOIN_SYNC_H
+#endif // VINCOIN_SYNC_H

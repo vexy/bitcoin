@@ -7,22 +7,22 @@ export LC_ALL=C
 TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
-BITCOIND=${BITCOIND:-$BINDIR/vincoind}
+VINCOIND=${VINCOIND:-$BINDIR/vincoind}
 SHARE_EXAMPLES_DIR=${SHARE_EXAMPLES_DIR:-$TOPDIR/share/examples}
 EXAMPLE_CONF_FILE=${EXAMPLE_CONF_FILE:-$SHARE_EXAMPLES_DIR/vincoin.conf}
 
-[ ! -x "$BITCOIND" ] && echo "$BITCOIND not found or not executable." && exit 1
+[ ! -x "$VINCOIND" ] && echo "$VINCOIND not found or not executable." && exit 1
 
 DIRTY=""
-VERSION_OUTPUT=$($BITCOIND --version)
+VERSION_OUTPUT=$($VINCOIND --version)
 if [[ $VERSION_OUTPUT == *"dirty"* ]]; then
-  DIRTY="${DIRTY}${BITCOIND}\n"
+  DIRTY="${DIRTY}${VINCOIND}\n"
 fi
 
 if [ -n "$DIRTY" ]
 then
-  echo -e "WARNING: $BITCOIND was built from a dirty tree.\n"
-  echo -e "To safely generate a vincoin.conf file, please commit your changes to $BITCOIND, rebuild, then run this script again.\n"
+  echo -e "WARNING: $VINCOIND was built from a dirty tree.\n"
+  echo -e "To safely generate a vincoin.conf file, please commit your changes to $VINCOIND, rebuild, then run this script again.\n"
 fi
 
 echo 'Generating example vincoin.conf file in share/examples/'
@@ -49,7 +49,7 @@ EOF
 # parse the output from vincoind --help
 # adding newlines is a bit funky to ensure portability for BSD
 # see here for more details: https://stackoverflow.com/a/24575385
-${BITCOIND} --help \
+${VINCOIND} --help \
     | sed '1,/Print this help message and exit/d' \
     | sed -E 's/^[[:space:]]{2}\-/#/' \
     | sed -E 's/^[[:space:]]{7}/# /' \

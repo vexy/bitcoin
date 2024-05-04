@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COINS_H
-#define BITCOIN_COINS_H
+#ifndef VINCOIN_COINS_H
+#define VINCOIN_COINS_H
 
 #include <compressor.h>
 #include <core_memusage.h>
@@ -390,4 +390,4 @@ private:
 
 };
 
-#endif // BITCOIN_COINS_H
+#endif // VINCOIN_COINS_H

@@ -136,7 +136,7 @@ public:
         vSeeds.emplace_back("dnsseed.vincoin.dashjr.org."); // Luke Dashjr
         vSeeds.emplace_back("seed.vincoinstats.com."); // Christian Decker, supports x1 - xf
         vSeeds.emplace_back("seed.vincoin.jonasschnelli.ch."); // Jonas Schnelli, only supports x1, x5, x9, and xd
-        vSeeds.emplace_back("seed.btc.petertodd.net."); // Peter Todd, only supports x1, x5, x9, and xd
+        vSeeds.emplace_back("seed.vnc.petertodd.net."); // Peter Todd, only supports x1, x5, x9, and xd
         vSeeds.emplace_back("seed.vincoin.sprovoost.nl."); // Sjors Provoost
         vSeeds.emplace_back("dnsseed.emzy.de."); // Stephan Oeste
         vSeeds.emplace_back("seed.vincoin.wiz.biz."); // Jason Maurice
@@ -243,7 +243,7 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("testnet-seed.vincoin.jonasschnelli.ch.");
-        vSeeds.emplace_back("seed.tbtc.petertodd.net.");
+        vSeeds.emplace_back("seed.tvnc.petertodd.net.");
         vSeeds.emplace_back("seed.testnet.vincoin.sprovoost.nl.");
         vSeeds.emplace_back("testnet-seed.bluematt.me."); // Just a static list of stable node(s), only supports x9
 

@@ -50,7 +50,7 @@ def parse_makefile(makefile):
                     lib_sources[current_lib] = []
                     break
 
-def parse_config_into_btc_config():
+def parse_config_into_vnc_config():
     def find_between( s, first, last ):
         try:
             start = s.index( first ) + len( first )
@@ -82,8 +82,8 @@ def parse_config_into_btc_config():
         if header in config_dict:
             template[index] = line.replace("$", f"{config_dict[header]}")
 
-    with open(os.path.join(SOURCE_DIR,'../build_msvc/vincoin_config.h'), "w", encoding="utf8") as btc_config:
-        btc_config.writelines(template)
+    with open(os.path.join(SOURCE_DIR,'../build_msvc/vincoin_config.h'), "w", encoding="utf8") as vnc_config:
+        vnc_config.writelines(template)
 
 def set_properties(vcxproj_filename, placeholder, content):
     with open(vcxproj_filename + '.in', 'r', encoding='utf-8') as vcxproj_in_file:
@@ -109,7 +109,7 @@ def main():
             content += '      <ObjectFileName>$(IntDir)' + object_filename + '</ObjectFileName>\n'
             content += '    </ClCompile>\n'
         set_properties(vcxproj_filename, '@SOURCE_FILES@\n', content)
-    parse_config_into_btc_config()
+    parse_config_into_vnc_config()
     copyfile(os.path.join(SOURCE_DIR,'../build_msvc/vincoin_config.h'), os.path.join(SOURCE_DIR, 'config/vincoin-config.h'))
 
 if __name__ == '__main__':

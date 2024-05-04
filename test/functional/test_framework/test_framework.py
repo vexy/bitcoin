@@ -231,10 +231,10 @@ class VincoinTestFramework(metaclass=VincoinTestMetaClass):
         """Update self.options with the paths of all binaries from environment variables or their default values"""
 
         binaries = {
-            "vincoind": ("vincoind", "BITCOIND"),
-            "vincoin-cli": ("vincoincli", "BITCOINCLI"),
-            "vincoin-util": ("vincoinutil", "BITCOINUTIL"),
-            "vincoin-wallet": ("vincoinwallet", "BITCOINWALLET"),
+            "vincoind": ("vincoind", "VINCOIND"),
+            "vincoin-cli": ("vincoincli", "VINCOINCLI"),
+            "vincoin-util": ("vincoinutil", "VINCOINUTIL"),
+            "vincoin-wallet": ("vincoinwallet", "VINCOINWALLET"),
         }
         for binary, [attribute_name, env_variable_name] in binaries.items():
             default_filename = os.path.join(
@@ -1002,7 +1002,7 @@ class VincoinTestFramework(metaclass=VincoinTestMetaClass):
 
     def is_vincoin_util_compiled(self):
         """Checks whether vincoin-util was compiled."""
-        return self.config["components"].getboolean("ENABLE_BITCOIN_UTIL")
+        return self.config["components"].getboolean("ENABLE_VINCOIN_UTIL")
 
     def is_zmq_compiled(self):
         """Checks whether the zmq module was compiled."""

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_PROTOCOL_H
-#define BITCOIN_PROTOCOL_H
+#ifndef VINCOIN_PROTOCOL_H
+#define VINCOIN_PROTOCOL_H
 
 #include <kernel/messagestartchars.h> // IWYU pragma: export
 #include <netaddress.h>
@@ -492,4 +492,4 @@ public:
 /** Convert a TX/WITNESS_TX/WTX CInv to a GenTxid. */
 GenTxid ToGenTxid(const CInv& inv);
 
-#endif // BITCOIN_PROTOCOL_H
+#endif // VINCOIN_PROTOCOL_H

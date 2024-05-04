@@ -29,17 +29,17 @@ if test -n "$PKG_CONFIG_LIBDIR"; then
   PKG_CONFIG="env PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR $PKG_CONFIG"
 fi
 
-BITCOIN_DAEMON_NAME=vincoind
-BITCOIN_GUI_NAME=vincoin-qt
-BITCOIN_TEST_NAME=test_vincoin
-BITCOIN_CLI_NAME=vincoin-cli
-BITCOIN_TX_NAME=vincoin-tx
-BITCOIN_UTIL_NAME=vincoin-util
-BITCOIN_CHAINSTATE_NAME=vincoin-chainstate
-BITCOIN_WALLET_TOOL_NAME=vincoin-wallet
+VINCOIN_DAEMON_NAME=vincoind
+VINCOIN_GUI_NAME=vincoin-qt
+VINCOIN_TEST_NAME=test_vincoin
+VINCOIN_CLI_NAME=vincoin-cli
+VINCOIN_TX_NAME=vincoin-tx
+VINCOIN_UTIL_NAME=vincoin-util
+VINCOIN_CHAINSTATE_NAME=vincoin-chainstate
+VINCOIN_WALLET_TOOL_NAME=vincoin-wallet
 dnl Multi Process
-BITCOIN_MP_NODE_NAME=vincoin-node
-BITCOIN_MP_GUI_NAME=vincoin-gui
+VINCOIN_MP_NODE_NAME=vincoin-node
+VINCOIN_MP_GUI_NAME=vincoin-gui
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 dnl This is also the default as-of libtool 2.4.7
@@ -50,9 +50,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BITCOIN_CONFIG_H])
-AH_TOP([#define BITCOIN_CONFIG_H])
-AH_BOTTOM([#endif //BITCOIN_CONFIG_H])
+AH_TOP([#ifndef VINCOIN_CONFIG_H])
+AH_TOP([#define VINCOIN_CONFIG_H])
+AH_BOTTOM([#endif //VINCOIN_CONFIG_H])
 
 dnl Automake init set-up and checks
 AM_INIT_AUTOMAKE([1.13 no-define subdir-objects foreign])
@@ -736,7 +736,7 @@ case $host in
 
          if test "$use_bdb" != "no" && $BREW list --versions berkeley-db@4 >/dev/null && test "$BDB_CFLAGS" = "" && test "$BDB_LIBS" = ""; then
            bdb_prefix=$($BREW --prefix berkeley-db@4 2>/dev/null)
-           dnl This must precede the call to BITCOIN_FIND_BDB48 below.
+           dnl This must precede the call to VINCOIN_FIND_BDB48 below.
            BDB_CFLAGS="-I$bdb_prefix/include"
            BDB_LIBS="-L$bdb_prefix/lib -ldb_cxx-4.8"
          fi
@@ -1286,10 +1286,10 @@ if test "$enable_fuzz" = "yes"; then
 
   AX_CHECK_PREPROC_FLAG([-DABORT_ON_FAILED_ASSUME], [DEBUG_CPPFLAGS="$DEBUG_CPPFLAGS -DABORT_ON_FAILED_ASSUME"], [], [$CXXFLAG_WERROR])
 else
-  BITCOIN_QT_INIT
+  VINCOIN_QT_INIT
 
   dnl sets $vincoin_enable_qt, $vincoin_enable_qt_test, $vincoin_enable_qt_dbus
-  BITCOIN_QT_CONFIGURE([5.11.3])
+  VINCOIN_QT_CONFIGURE([5.11.3])
 
   dnl Keep a copy of the original $QT_INCLUDES and use it when invoking qt's moc
   QT_INCLUDES_UNSUPPRESSED=$QT_INCLUDES
@@ -1320,7 +1320,7 @@ fi
 if test "$enable_wallet" != "no"; then
     dnl Check for libdb_cxx only if wallet enabled
     if test "$use_bdb" != "no"; then
-      BITCOIN_FIND_BDB48
+      VINCOIN_FIND_BDB48
       if test "$suppress_external_warnings" != "no" ; then
         BDB_CPPFLAGS=SUPPRESS_WARNINGS($BDB_CPPFLAGS)
       fi
@@ -1553,7 +1553,7 @@ fi
 dnl QR Code encoding library check
 
 if test "$use_qr" != "no"; then
-  BITCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
+  VINCOIN_QT_CHECK([PKG_CHECK_MODULES([QR], [libqrencode], [have_qrencode=yes], [have_qrencode=no])])
 fi
 
 dnl ZMQ check
@@ -1602,8 +1602,8 @@ else
 fi
 
 AM_CONDITIONAL([BUILD_MULTIPROCESS], [test "$build_multiprocess" = "yes"])
-AM_CONDITIONAL([BUILD_BITCOIN_NODE], [test "$build_multiprocess" = "yes"])
-AM_CONDITIONAL([BUILD_BITCOIN_GUI], [test "$build_multiprocess" = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_NODE], [test "$build_multiprocess" = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_GUI], [test "$build_multiprocess" = "yes"])
 
 dnl codegen tools check
 
@@ -1617,23 +1617,23 @@ if test "$build_multiprocess" != "no"; then
 fi
 
 AC_MSG_CHECKING([whether to build vincoind])
-AM_CONDITIONAL([BUILD_BITCOIND], [test $build_vincoind = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIND], [test $build_vincoind = "yes"])
 AC_MSG_RESULT($build_vincoind)
 
 AC_MSG_CHECKING([whether to build vincoin-cli])
-AM_CONDITIONAL([BUILD_BITCOIN_CLI], [test $build_vincoin_cli = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_CLI], [test $build_vincoin_cli = "yes"])
 AC_MSG_RESULT($build_vincoin_cli)
 
 AC_MSG_CHECKING([whether to build vincoin-tx])
-AM_CONDITIONAL([BUILD_BITCOIN_TX], [test $build_vincoin_tx = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_TX], [test $build_vincoin_tx = "yes"])
 AC_MSG_RESULT($build_vincoin_tx)
 
 AC_MSG_CHECKING([whether to build vincoin-wallet])
-AM_CONDITIONAL([BUILD_BITCOIN_WALLET], [test $build_vincoin_wallet = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_WALLET], [test $build_vincoin_wallet = "yes"])
 AC_MSG_RESULT($build_vincoin_wallet)
 
 AC_MSG_CHECKING([whether to build vincoin-util])
-AM_CONDITIONAL([BUILD_BITCOIN_UTIL], [test $build_vincoin_util = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_UTIL], [test $build_vincoin_util = "yes"])
 AC_MSG_RESULT($build_vincoin_util)
 
 AC_MSG_CHECKING([whether to build experimental vincoin-chainstate])
@@ -1642,18 +1642,18 @@ if test "$build_vincoin_chainstate" = "yes"; then
     AC_MSG_ERROR([experimental vincoin-chainstate cannot be built without the experimental vincoinkernel library. Use --with-experimental-kernel-lib]);
   fi
 fi
-AM_CONDITIONAL([BUILD_BITCOIN_CHAINSTATE], [test $build_vincoin_chainstate = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_CHAINSTATE], [test $build_vincoin_chainstate = "yes"])
 AC_MSG_RESULT($build_vincoin_chainstate)
 
 AC_MSG_CHECKING([whether to build libraries])
-AM_CONDITIONAL([BUILD_BITCOIN_LIBS], [test $build_vincoin_libs = "yes"])
+AM_CONDITIONAL([BUILD_VINCOIN_LIBS], [test $build_vincoin_libs = "yes"])
 
 if test "$build_vincoin_libs" = "yes"; then
   AC_DEFINE([HAVE_CONSENSUS_LIB], [1], [Define this symbol if the consensus lib has been built])
   AC_CONFIG_FILES([libvincoinconsensus.pc:libvincoinconsensus.pc.in])
 fi
 
-AM_CONDITIONAL([BUILD_BITCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_vincoin_chainstate" = "yes" )])
+AM_CONDITIONAL([BUILD_VINCOIN_KERNEL_LIB], [test "$build_experimental_kernel_lib" != "no" && ( test "$build_experimental_kernel_lib" = "yes" || test "$build_vincoin_chainstate" = "yes" )])
 
 AC_MSG_RESULT($build_vincoin_libs)
 
@@ -1843,16 +1843,16 @@ AC_SUBST(COPYRIGHT_YEAR, _COPYRIGHT_YEAR)
 AC_SUBST(COPYRIGHT_HOLDERS, "_COPYRIGHT_HOLDERS")
 AC_SUBST(COPYRIGHT_HOLDERS_SUBSTITUTION, "_COPYRIGHT_HOLDERS_SUBSTITUTION")
 AC_SUBST(COPYRIGHT_HOLDERS_FINAL, "_COPYRIGHT_HOLDERS_FINAL")
-AC_SUBST(BITCOIN_DAEMON_NAME)
-AC_SUBST(BITCOIN_GUI_NAME)
-AC_SUBST(BITCOIN_TEST_NAME)
-AC_SUBST(BITCOIN_CLI_NAME)
-AC_SUBST(BITCOIN_TX_NAME)
-AC_SUBST(BITCOIN_UTIL_NAME)
-AC_SUBST(BITCOIN_CHAINSTATE_NAME)
-AC_SUBST(BITCOIN_WALLET_TOOL_NAME)
-AC_SUBST(BITCOIN_MP_NODE_NAME)
-AC_SUBST(BITCOIN_MP_GUI_NAME)
+AC_SUBST(VINCOIN_DAEMON_NAME)
+AC_SUBST(VINCOIN_GUI_NAME)
+AC_SUBST(VINCOIN_TEST_NAME)
+AC_SUBST(VINCOIN_CLI_NAME)
+AC_SUBST(VINCOIN_TX_NAME)
+AC_SUBST(VINCOIN_UTIL_NAME)
+AC_SUBST(VINCOIN_CHAINSTATE_NAME)
+AC_SUBST(VINCOIN_WALLET_TOOL_NAME)
+AC_SUBST(VINCOIN_MP_NODE_NAME)
+AC_SUBST(VINCOIN_MP_GUI_NAME)
 
 AC_SUBST(RELDFLAGS)
 AC_SUBST(CORE_LDFLAGS)

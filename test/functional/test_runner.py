@@ -468,7 +468,7 @@ def main():
 
     logging.debug("Temporary test directory at %s" % tmpdir)
 
-    enable_vincoind = config["components"].getboolean("ENABLE_BITCOIND")
+    enable_vincoind = config["components"].getboolean("ENABLE_VINCOIND")
 
     if not enable_vincoind:
         print("No functional tests to run.")

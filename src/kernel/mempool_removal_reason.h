@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://opensource.org/license/mit/.
 
-#ifndef BITCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H
-#define BITCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H
+#ifndef VINCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H
+#define VINCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H
 
 #include <string>
 
@@ -21,4 +21,4 @@ enum class MemPoolRemovalReason {
 
 std::string RemovalReasonToString(const MemPoolRemovalReason& r) noexcept;
 
-#endif // BITCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H
+#endif // VINCOIN_KERNEL_MEMPOOL_REMOVAL_REASON_H

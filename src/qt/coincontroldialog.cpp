@@ -496,7 +496,7 @@ void CoinControlDialog::updateLabels(CCoinControl& m_coin_control, WalletModel *
     }
 
     // actually update labels
-    VincoinUnit nDisplayUnit = VincoinUnit::BTC;
+    VincoinUnit nDisplayUnit = VincoinUnit::VNC;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INTERFACES_WALLET_H
-#define BITCOIN_INTERFACES_WALLET_H
+#ifndef VINCOIN_INTERFACES_WALLET_H
+#define VINCOIN_INTERFACES_WALLET_H
 
 #include <addresstype.h>
 #include <consensus/amount.h>
@@ -448,4 +448,4 @@ std::unique_ptr<WalletLoader> MakeWalletLoader(Chain& chain, ArgsManager& args);
 
 } // namespace interfaces
 
-#endif // BITCOIN_INTERFACES_WALLET_H
+#endif // VINCOIN_INTERFACES_WALLET_H

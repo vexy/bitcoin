@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ADDRESSTYPE_H
-#define BITCOIN_ADDRESSTYPE_H
+#ifndef VINCOIN_ADDRESSTYPE_H
+#define VINCOIN_ADDRESSTYPE_H
 
 #include <attributes.h>
 #include <pubkey.h>
@@ -152,4 +152,4 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet)
  */
 CScript GetScriptForDestination(const CTxDestination& dest);
 
-#endif // BITCOIN_ADDRESSTYPE_H
+#endif // VINCOIN_ADDRESSTYPE_H

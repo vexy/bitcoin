@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_REGISTER_H
-#define BITCOIN_RPC_REGISTER_H
+#ifndef VINCOIN_RPC_REGISTER_H
+#define VINCOIN_RPC_REGISTER_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/vincoin-config.h>
@@ -42,4 +42,4 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
     RegisterTxoutProofRPCCommands(t);
 }
 
-#endif // BITCOIN_RPC_REGISTER_H
+#endif // VINCOIN_RPC_REGISTER_H

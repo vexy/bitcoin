@@ -181,7 +181,7 @@ QString PSBTOperationsDialog::renderTransaction(const PartiallySignedTransaction
         ExtractDestination(out.scriptPubKey, address);
         totalAmount += out.nValue;
         tx_description.append(bullet_point).append(tr("Sends %1 to %2")
-            .arg(VincoinUnits::formatWithUnit(VincoinUnit::BTC, out.nValue))
+            .arg(VincoinUnits::formatWithUnit(VincoinUnit::VNC, out.nValue))
             .arg(QString::fromStdString(EncodeDestination(address))));
         // Check if the address is one of ours
         if (m_wallet_model != nullptr && m_wallet_model->wallet().txoutIsMine(out)) tx_description.append(" (" + tr("own address") + ")");
@@ -195,7 +195,7 @@ QString PSBTOperationsDialog::renderTransaction(const PartiallySignedTransaction
         tx_description.append(tr("Unable to calculate transaction fee or total transaction amount."));
     } else {
         tx_description.append(tr("Pays transaction fee: "));
-        tx_description.append(VincoinUnits::formatWithUnit(VincoinUnit::BTC, *analysis.fee));
+        tx_description.append(VincoinUnits::formatWithUnit(VincoinUnit::VNC, *analysis.fee));
 
         // add total amount in all subdivision units
         tx_description.append("<hr />");

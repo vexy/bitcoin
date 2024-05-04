@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COMMON_SETTINGS_H
-#define BITCOIN_COMMON_SETTINGS_H
+#ifndef VINCOIN_COMMON_SETTINGS_H
+#define VINCOIN_COMMON_SETTINGS_H
 
 #include <util/fs.h>
 
@@ -112,4 +112,4 @@ auto FindKey(Map&& map, Key&& key) -> decltype(&map.at(key))
 
 } // namespace common
 
-#endif // BITCOIN_COMMON_SETTINGS_H
+#endif // VINCOIN_COMMON_SETTINGS_H

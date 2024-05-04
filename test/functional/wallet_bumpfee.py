@@ -77,7 +77,7 @@ class BumpFeeTest(VincoinTestFramework):
         peer_node, rbf_node = self.nodes
         rbf_node_address = rbf_node.getnewaddress()
 
-        # fund rbf node with 10 coins of 0.001 btc (100,000 satoshis)
+        # fund rbf node with 10 coins of 0.001 vnc (100,000 satoshis)
         self.log.info("Mining blocks...")
         self.generate(peer_node, 110)
         for _ in range(25):
@@ -166,7 +166,7 @@ class BumpFeeTest(VincoinTestFramework):
         for k, v in {"number": 42, "object": {"foo": "bar"}}.items():
             assert_raises_rpc_error(-3, f"JSON value of type {k} for field estimate_mode is not of expected type string",
                 rbf_node.bumpfee, rbfid, estimate_mode=v)
-        for mode in ["foo", Decimal("3.1415"), "sat/B", "BTC/kB"]:
+        for mode in ["foo", Decimal("3.1415"), "sat/B", "VNC/kB"]:
             assert_raises_rpc_error(-8, 'Invalid estimate_mode parameter, must be one of: "unset", "economical", "conservative"',
                 rbf_node.bumpfee, rbfid, estimate_mode=mode)
 
@@ -518,9 +518,9 @@ def test_dust_to_fee(self, rbf_node, dest_address):
     if not 140 <= fulltx["vsize"] <= 141:
         raise AssertionError("Invalid tx vsize of {} (140-141 expected), full tx: {}".format(fulltx["vsize"], fulltx))
     # Bump with fee_rate of 350.25 sat/vB vbytes to create dust.
-    # Expected fee is 141 vbytes * fee_rate 0.00350250 BTC / 1000 vbytes = 0.00049385 BTC.
-    # or occasionally 140 vbytes * fee_rate 0.00350250 BTC / 1000 vbytes = 0.00049035 BTC.
-    # Dust should be dropped to the fee, so actual bump fee is 0.00050000 BTC.
+    # Expected fee is 141 vbytes * fee_rate 0.00350250 VNC / 1000 vbytes = 0.00049385 VNC.
+    # or occasionally 140 vbytes * fee_rate 0.00350250 VNC / 1000 vbytes = 0.00049035 VNC.
+    # Dust should be dropped to the fee, so actual bump fee is 0.00050000 VNC.
     bumped_tx = rbf_node.bumpfee(rbfid, fee_rate=350.25)
     full_bumped_tx = rbf_node.getrawtransaction(bumped_tx["txid"], 1)
     assert_equal(bumped_tx["fee"], Decimal("0.00050000"))
@@ -557,7 +557,7 @@ def test_settxfee(self, rbf_node, dest_address):
 def test_maxtxfee_fails(self, rbf_node, dest_address):
     self.log.info('Test that bumpfee fails when it hits -maxtxfee')
     # size of bumped transaction (p2wpkh, 1 input, 2 outputs): 141 vbytes
-    # expected bump fee of 141 vbytes * 0.00200000 BTC / 1000 vbytes = 0.00002820 BTC
+    # expected bump fee of 141 vbytes * 0.00200000 VNC / 1000 vbytes = 0.00002820 VNC
     # which exceeds maxtxfee and is expected to raise
     self.restart_node(1, ['-maxtxfee=0.000025'] + self.extra_args[1])
     rbf_node.walletpassphrase(WALLET_PASSPHRASE, WALLET_PASSPHRASE_TIMEOUT)
@@ -633,7 +633,7 @@ def test_watchonly_psbt(self, peer_node, rbf_node, dest_address):
     self.generate(peer_node, 1)
 
     # Create single-input PSBT for transaction to be bumped
-    # Ensure the payment amount + change can be fully funded using one of the 0.001BTC inputs.
+    # Ensure the payment amount + change can be fully funded using one of the 0.001VNC inputs.
     psbt = watcher.walletcreatefundedpsbt([watcher.listunspent()[0]], {dest_address: 0.0005}, 0,
             {"fee_rate": 1, "add_inputs": False}, True)['psbt']
     psbt_signed = signer.walletprocesspsbt(psbt=psbt, sign=True, sighashtype="ALL", bip32derivs=True)

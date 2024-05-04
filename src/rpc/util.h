@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_UTIL_H
-#define BITCOIN_RPC_UTIL_H
+#ifndef VINCOIN_RPC_UTIL_H
+#define VINCOIN_RPC_UTIL_H
 
 #include <addresstype.h>
 #include <consensus/amount.h>
@@ -104,8 +104,8 @@ std::vector<unsigned char> ParseHexO(const UniValue& o, std::string_view strKey)
  */
 CAmount AmountFromValue(const UniValue& value, int decimals = 8);
 /**
- * Parse a json number or string, denoting BTC/kvB, into a CFeeRate (sat/kvB).
- * Reject negative values or rates larger than 1BTC/kvB.
+ * Parse a json number or string, denoting VNC/kvB, into a CFeeRate (sat/kvB).
+ * Reject negative values or rates larger than 1VNC/kvB.
  */
 CFeeRate ParseFeeRate(const UniValue& json);
 
@@ -469,4 +469,4 @@ private:
 void PushWarnings(const UniValue& warnings, UniValue& obj);
 void PushWarnings(const std::vector<bilingual_str>& warnings, UniValue& obj);
 
-#endif // BITCOIN_RPC_UTIL_H
+#endif // VINCOIN_RPC_UTIL_H

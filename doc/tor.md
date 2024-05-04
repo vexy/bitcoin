@@ -1,4 +1,4 @@
-# TOR SUPPORT IN BITCOIN
+# TOR SUPPORT IN VINCOIN
 
 It is possible to run Vincoin Core as a Tor onion service, and connect to such services.
 

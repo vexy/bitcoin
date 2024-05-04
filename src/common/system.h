@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COMMON_SYSTEM_H
-#define BITCOIN_COMMON_SYSTEM_H
+#ifndef VINCOIN_COMMON_SYSTEM_H
+#define VINCOIN_COMMON_SYSTEM_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/vincoin-config.h>
@@ -31,4 +31,4 @@ void runCommand(const std::string& strCommand);
  */
 int GetNumCores();
 
-#endif // BITCOIN_COMMON_SYSTEM_H
+#endif // VINCOIN_COMMON_SYSTEM_H

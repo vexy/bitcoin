@@ -13,7 +13,7 @@ import sys
 from subprocess import check_output
 
 
-HEADER_ID_PREFIX = 'BITCOIN_'
+HEADER_ID_PREFIX = 'VINCOIN_'
 HEADER_ID_SUFFIX = '_H'
 
 EXCLUDE_FILES_WITH_PREFIX = ['contrib/devtools/vincoin-tidy',
@@ -46,7 +46,7 @@ def _get_header_id(header_file: str) -> str:
     """ Helper function to get the header id from a header file
         string.
 
-        eg: 'src/wallet/walletdb.h' -> 'BITCOIN_WALLET_WALLETDB_H'
+        eg: 'src/wallet/walletdb.h' -> 'VINCOIN_WALLET_WALLETDB_H'
 
     Args:
         header_file: Filepath to header file.

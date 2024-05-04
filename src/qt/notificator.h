@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_NOTIFICATOR_H
-#define BITCOIN_QT_NOTIFICATOR_H
+#ifndef VINCOIN_QT_NOTIFICATOR_H
+#define VINCOIN_QT_NOTIFICATOR_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/vincoin-config.h>
@@ -74,4 +74,4 @@ private:
 #endif
 };
 
-#endif // BITCOIN_QT_NOTIFICATOR_H
+#endif // VINCOIN_QT_NOTIFICATOR_H

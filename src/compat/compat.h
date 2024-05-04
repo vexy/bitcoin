@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COMPAT_COMPAT_H
-#define BITCOIN_COMPAT_COMPAT_H
+#ifndef VINCOIN_COMPAT_COMPAT_H
+#define VINCOIN_COMPAT_COMPAT_H
 
 // Windows defines FD_SETSIZE to 64 (see _fd_types.h in mingw-w64),
 // which is too small for our usage, but allows us to redefine it safely.
@@ -105,4 +105,4 @@ typedef char* sockopt_arg_type;
 #define MSG_DONTWAIT 0
 #endif
 
-#endif // BITCOIN_COMPAT_COMPAT_H
+#endif // VINCOIN_COMPAT_COMPAT_H

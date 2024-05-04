@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SERIALIZE_H
-#define BITCOIN_SERIALIZE_H
+#ifndef VINCOIN_SERIALIZE_H
+#define VINCOIN_SERIALIZE_H
 
 #include <attributes.h>
 #include <compat/assumptions.h> // IWYU pragma: keep
@@ -1184,4 +1184,4 @@ public:
         return ParamsWrapper{*this, t};                                                  \
     }
 
-#endif // BITCOIN_SERIALIZE_H
+#endif // VINCOIN_SERIALIZE_H

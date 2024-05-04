@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_OPTIONSMODEL_H
-#define BITCOIN_QT_OPTIONSMODEL_H
+#ifndef VINCOIN_QT_OPTIONSMODEL_H
+#define VINCOIN_QT_OPTIONSMODEL_H
 
 #include <cstdint>
 #include <qt/vincoinunits.h>
@@ -73,7 +73,7 @@ public:
         SpendZeroConfChange,    // bool
         Listen,                 // bool
         Server,                 // bool
-        EnablePSBTControls,     // bool
+        EnablePSVNControls,     // bool
         MaskValues,             // bool
         OptionIDRowCount,
     };
@@ -106,7 +106,7 @@ public:
     QFont getFontForMoney() const;
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
     bool getSubFeeFromAmount() const { return m_sub_fee_from_amount; }
-    bool getEnablePSBTControls() const { return m_enable_psbt_controls; }
+    bool getEnablePSVNControls() const { return m_enable_psbt_controls; }
     const QString& getOverriddenByCommandLine() { return strOverriddenByCommandLine; }
 
     /** Whether -signer was set or not */
@@ -157,4 +157,4 @@ Q_SIGNALS:
 
 Q_DECLARE_METATYPE(OptionsModel::FontChoice)
 
-#endif // BITCOIN_QT_OPTIONSMODEL_H
+#endif // VINCOIN_QT_OPTIONSMODEL_H

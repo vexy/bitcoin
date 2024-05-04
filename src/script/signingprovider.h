@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_SIGNINGPROVIDER_H
-#define BITCOIN_SCRIPT_SIGNINGPROVIDER_H
+#ifndef VINCOIN_SCRIPT_SIGNINGPROVIDER_H
+#define VINCOIN_SCRIPT_SIGNINGPROVIDER_H
 
 #include <addresstype.h>
 #include <attributes.h>
@@ -313,4 +313,4 @@ public:
     bool GetTaprootBuilder(const XOnlyPubKey& output_key, TaprootBuilder& builder) const override;
 };
 
-#endif // BITCOIN_SCRIPT_SIGNINGPROVIDER_H
+#endif // VINCOIN_SCRIPT_SIGNINGPROVIDER_H

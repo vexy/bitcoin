@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INIT_H
-#define BITCOIN_INIT_H
+#ifndef VINCOIN_INIT_H
+#define VINCOIN_INIT_H
 
 #include <any>
 #include <memory>
@@ -81,4 +81,4 @@ void SetupServerArgs(ArgsManager& argsman);
 /** Validates requirements to run the indexes and spawns each index initial sync thread */
 bool StartIndexBackgroundSync(node::NodeContext& node);
 
-#endif // BITCOIN_INIT_H
+#endif // VINCOIN_INIT_H

@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=vincoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/vincoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/vincoind}
+# you can override the lockfile via VINCOIND_LOCKFILE in /etc/sysconfig/vincoind
+lockfile=${VINCOIND_LOCKFILE-/var/lock/subsys/vincoind}
 
-# vincoind defaults to /usr/bin/vincoind, override with BITCOIND_BIN
-vincoind=${BITCOIND_BIN-/usr/bin/vincoind}
+# vincoind defaults to /usr/bin/vincoind, override with VINCOIND_BIN
+vincoind=${VINCOIND_BIN-/usr/bin/vincoind}
 
-# vincoind opts default to -disablewallet, override with BITCOIND_OPTS
-vincoind_opts=${BITCOIND_OPTS--disablewallet}
+# vincoind opts default to -disablewallet, override with VINCOIND_OPTS
+vincoind_opts=${VINCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

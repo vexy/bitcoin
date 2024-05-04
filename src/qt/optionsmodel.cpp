@@ -192,13 +192,13 @@ bool OptionsModel::Init(bilingual_str& error)
 
     // Display
     if (!settings.contains("DisplayVincoinUnit")) {
-        settings.setValue("DisplayVincoinUnit", QVariant::fromValue(VincoinUnit::BTC));
+        settings.setValue("DisplayVincoinUnit", QVariant::fromValue(VincoinUnit::VNC));
     }
     QVariant unit = settings.value("DisplayVincoinUnit");
     if (unit.canConvert<VincoinUnit>()) {
         m_display_vincoin_unit = unit.value<VincoinUnit>();
     } else {
-        m_display_vincoin_unit = VincoinUnit::BTC;
+        m_display_vincoin_unit = VincoinUnit::VNC;
         settings.setValue("DisplayVincoinUnit", QVariant::fromValue(m_display_vincoin_unit));
     }
 
@@ -468,7 +468,7 @@ QVariant OptionsModel::getOption(OptionID option, const std::string& suffix) con
         return QVariant::fromValue(m_font_money);
     case CoinControlFeatures:
         return fCoinControlFeatures;
-    case EnablePSBTControls:
+    case EnablePSVNControls:
         return settings.value("enable_psbt_controls");
     case Prune:
         return PruneEnabled(setting());
@@ -654,7 +654,7 @@ bool OptionsModel::setOption(OptionID option, const QVariant& value, const std::
         settings.setValue("fCoinControlFeatures", fCoinControlFeatures);
         Q_EMIT coinControlFeaturesChanged(fCoinControlFeatures);
         break;
-    case EnablePSBTControls:
+    case EnablePSVNControls:
         m_enable_psbt_controls = value.toBool();
         settings.setValue("enable_psbt_controls", m_enable_psbt_controls);
         break;

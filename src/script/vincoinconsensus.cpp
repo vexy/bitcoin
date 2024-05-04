@@ -153,5 +153,5 @@ int vincoinconsensus_verify_script(const unsigned char *scriptPubKey, unsigned i
 unsigned int vincoinconsensus_version()
 {
     // Just use the API version for now
-    return BITCOINCONSENSUS_API_VER;
+    return VINCOINCONSENSUS_API_VER;
 }

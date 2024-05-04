@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LOGGING_H
-#define BITCOIN_LOGGING_H
+#ifndef VINCOIN_LOGGING_H
+#define VINCOIN_LOGGING_H
 
 #include <threadsafety.h>
 #include <tinyformat.h>
@@ -270,4 +270,4 @@ bool error(const char* fmt, const Args&... args)
     return false;
 }
 
-#endif // BITCOIN_LOGGING_H
+#endif // VINCOIN_LOGGING_H

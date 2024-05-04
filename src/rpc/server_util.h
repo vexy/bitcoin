@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_SERVER_UTIL_H
-#define BITCOIN_RPC_SERVER_UTIL_H
+#ifndef VINCOIN_RPC_SERVER_UTIL_H
+#define VINCOIN_RPC_SERVER_UTIL_H
 
 #include <any>
 
@@ -35,4 +35,4 @@ PeerManager& EnsurePeerman(const node::NodeContext& node);
 AddrMan& EnsureAddrman(const node::NodeContext& node);
 AddrMan& EnsureAnyAddrman(const std::any& context);
 
-#endif // BITCOIN_RPC_SERVER_UTIL_H
+#endif // VINCOIN_RPC_SERVER_UTIL_H

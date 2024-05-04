@@ -184,7 +184,7 @@ bool parseVincoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if (!VincoinUnits::parse(VincoinUnit::BTC, i->second, &rv.amount)) {
+                if (!VincoinUnits::parse(VincoinUnit::VNC, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -216,7 +216,7 @@ QString formatVincoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(VincoinUnits::format(VincoinUnit::BTC, info.amount, false, VincoinUnits::SeparatorStyle::NEVER));
+        ret += QString("?amount=%1").arg(VincoinUnits::format(VincoinUnit::VNC, info.amount, false, VincoinUnits::SeparatorStyle::NEVER));
         paramCount++;
     }
 

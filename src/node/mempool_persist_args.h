@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_MEMPOOL_PERSIST_ARGS_H
-#define BITCOIN_NODE_MEMPOOL_PERSIST_ARGS_H
+#ifndef VINCOIN_NODE_MEMPOOL_PERSIST_ARGS_H
+#define VINCOIN_NODE_MEMPOOL_PERSIST_ARGS_H
 
 #include <util/fs.h>
 
@@ -22,4 +22,4 @@ fs::path MempoolPath(const ArgsManager& argsman);
 
 } // namespace node
 
-#endif // BITCOIN_NODE_MEMPOOL_PERSIST_ARGS_H
+#endif // VINCOIN_NODE_MEMPOOL_PERSIST_ARGS_H

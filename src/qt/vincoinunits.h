@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINUNITS_H
-#define BITCOIN_QT_BITCOINUNITS_H
+#ifndef VINCOIN_QT_VINCOINUNITS_H
+#define VINCOIN_QT_VINCOINUNITS_H
 
 #include <consensus/amount.h>
 
@@ -40,9 +40,9 @@ public:
       @note Source: https://en.vincoin.it/wiki/Units . Please add only sensible ones
      */
     enum class Unit {
-        BTC,
-        mBTC,
-        uBTC,
+        VNC,
+        mVNC,
+        uVNC,
         SAT
     };
     Q_ENUM(Unit)
@@ -113,4 +113,4 @@ typedef VincoinUnits::Unit VincoinUnit;
 QDataStream& operator<<(QDataStream& out, const VincoinUnit& unit);
 QDataStream& operator>>(QDataStream& in, VincoinUnit& unit);
 
-#endif // BITCOIN_QT_BITCOINUNITS_H
+#endif // VINCOIN_QT_VINCOINUNITS_H

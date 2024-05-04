@@ -24,53 +24,53 @@ check_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-BITCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
+VINCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
 
-LIBBITCOIN_NODE=libvincoin_node.a
-LIBBITCOIN_COMMON=libvincoin_common.a
-LIBBITCOIN_CONSENSUS=libvincoin_consensus.a
-LIBBITCOIN_CLI=libvincoin_cli.a
-LIBBITCOIN_UTIL=libvincoin_util.a
-LIBBITCOIN_CRYPTO_BASE=crypto/libvincoin_crypto_base.la
-LIBBITCOINQT=qt/libvincoinqt.a
+LIBVINCOIN_NODE=libvincoin_node.a
+LIBVINCOIN_COMMON=libvincoin_common.a
+LIBVINCOIN_CONSENSUS=libvincoin_consensus.a
+LIBVINCOIN_CLI=libvincoin_cli.a
+LIBVINCOIN_UTIL=libvincoin_util.a
+LIBVINCOIN_CRYPTO_BASE=crypto/libvincoin_crypto_base.la
+LIBVINCOINQT=qt/libvincoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libvincoin_zmq.a
+LIBVINCOIN_ZMQ=libvincoin_zmq.a
 endif
-if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libvincoinconsensus.la
+if BUILD_VINCOIN_LIBS
+LIBVINCOINCONSENSUS=libvincoinconsensus.la
 endif
-if BUILD_BITCOIN_KERNEL_LIB
-LIBBITCOINKERNEL=libvincoinkernel.la
+if BUILD_VINCOIN_KERNEL_LIB
+LIBVINCOINKERNEL=libvincoinkernel.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libvincoin_wallet.a
-LIBBITCOIN_WALLET_TOOL=libvincoin_wallet_tool.a
+LIBVINCOIN_WALLET=libvincoin_wallet.a
+LIBVINCOIN_WALLET_TOOL=libvincoin_wallet_tool.a
 endif
 
-LIBBITCOIN_CRYPTO = $(LIBBITCOIN_CRYPTO_BASE)
+LIBVINCOIN_CRYPTO = $(LIBVINCOIN_CRYPTO_BASE)
 if USE_ASM
-LIBBITCOIN_CRYPTO_SSE4 = crypto/libvincoin_crypto_sse4.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE4)
+LIBVINCOIN_CRYPTO_SSE4 = crypto/libvincoin_crypto_sse4.la
+LIBVINCOIN_CRYPTO += $(LIBVINCOIN_CRYPTO_SSE4)
 endif
 if ENABLE_SSE41
-LIBBITCOIN_CRYPTO_SSE41 = crypto/libvincoin_crypto_sse41.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE41)
+LIBVINCOIN_CRYPTO_SSE41 = crypto/libvincoin_crypto_sse41.la
+LIBVINCOIN_CRYPTO += $(LIBVINCOIN_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOIN_CRYPTO_AVX2 = crypto/libvincoin_crypto_avx2.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_AVX2)
+LIBVINCOIN_CRYPTO_AVX2 = crypto/libvincoin_crypto_avx2.la
+LIBVINCOIN_CRYPTO += $(LIBVINCOIN_CRYPTO_AVX2)
 endif
 if ENABLE_X86_SHANI
-LIBBITCOIN_CRYPTO_X86_SHANI = crypto/libvincoin_crypto_x86_shani.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_X86_SHANI)
+LIBVINCOIN_CRYPTO_X86_SHANI = crypto/libvincoin_crypto_x86_shani.la
+LIBVINCOIN_CRYPTO += $(LIBVINCOIN_CRYPTO_X86_SHANI)
 endif
 if ENABLE_ARM_SHANI
-LIBBITCOIN_CRYPTO_ARM_SHANI = crypto/libvincoin_crypto_arm_shani.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_ARM_SHANI)
+LIBVINCOIN_CRYPTO_ARM_SHANI = crypto/libvincoin_crypto_arm_shani.la
+LIBVINCOIN_CRYPTO += $(LIBVINCOIN_CRYPTO_ARM_SHANI)
 endif
-noinst_LTLIBRARIES += $(LIBBITCOIN_CRYPTO)
+noinst_LTLIBRARIES += $(LIBVINCOIN_CRYPTO)
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(wildcard secp256k1/include/*)
 	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C $(@D) $(@F)
@@ -78,49 +78,49 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(w
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_NODE) \
-  $(LIBBITCOIN_CLI) \
-  $(LIBBITCOIN_IPC) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_WALLET_TOOL) \
-  $(LIBBITCOIN_ZMQ)
+  $(LIBVINCOIN_UTIL) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_NODE) \
+  $(LIBVINCOIN_CLI) \
+  $(LIBVINCOIN_IPC) \
+  $(LIBVINCOIN_WALLET) \
+  $(LIBVINCOIN_WALLET_TOOL) \
+  $(LIBVINCOIN_ZMQ)
 
-if BUILD_BITCOIND
+if BUILD_VINCOIND
   bin_PROGRAMS += vincoind
 endif
 
-if BUILD_BITCOIN_NODE
+if BUILD_VINCOIN_NODE
   bin_PROGRAMS += vincoin-node
 endif
 
-if BUILD_BITCOIN_CLI
+if BUILD_VINCOIN_CLI
   bin_PROGRAMS += vincoin-cli
 endif
 
-if BUILD_BITCOIN_TX
+if BUILD_VINCOIN_TX
   bin_PROGRAMS += vincoin-tx
 endif
 
 if ENABLE_WALLET
-if BUILD_BITCOIN_WALLET
+if BUILD_VINCOIN_WALLET
   bin_PROGRAMS += vincoin-wallet
 endif
 endif
 
-if BUILD_BITCOIN_UTIL
+if BUILD_VINCOIN_UTIL
   bin_PROGRAMS += vincoin-util
 endif
 
-if BUILD_BITCOIN_CHAINSTATE
+if BUILD_VINCOIN_CHAINSTATE
   bin_PROGRAMS += vincoin-chainstate
 endif
 
 .PHONY: FORCE check-symbols check-security
 # vincoin core #
-BITCOIN_CORE_H = \
+VINCOIN_CORE_H = \
   addresstype.h \
   addrdb.h \
   addrman.h \
@@ -380,7 +380,7 @@ obj/build.h: FORCE
 libvincoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # node #
-libvincoin_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(LEVELDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libvincoin_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(LEVELDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libvincoin_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_node_a_SOURCES = \
   addrdb.cpp \
@@ -473,7 +473,7 @@ libvincoin_node_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 
 if ENABLE_WALLET
 libvincoin_node_a_SOURCES += wallet/init.cpp
@@ -486,7 +486,7 @@ endif
 
 # zmq #
 if ENABLE_ZMQ
-libvincoin_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libvincoin_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(ZMQ_CFLAGS)
 libvincoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
@@ -498,7 +498,7 @@ endif
 #
 
 # wallet #
-libvincoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
+libvincoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
 libvincoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_wallet_a_SOURCES = \
   wallet/coincontrol.cpp \
@@ -528,7 +528,7 @@ libvincoin_wallet_a_SOURCES = \
   wallet/walletdb.cpp \
   wallet/walletutil.cpp \
   wallet/coinselection.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 
 if USE_SQLITE
 libvincoin_wallet_a_SOURCES += wallet/sqlite.cpp
@@ -539,11 +539,11 @@ endif
 #
 
 # wallet tool #
-libvincoin_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
+libvincoin_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(BOOST_CPPFLAGS)
 libvincoin_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 #
 
 # crypto #
@@ -636,7 +636,7 @@ crypto_libvincoin_crypto_arm_shani_la_SOURCES = crypto/sha256_arm_shani.cpp
 #
 
 # consensus #
-libvincoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libvincoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 libvincoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_consensus_a_SOURCES = \
   arith_uint256.cpp \
@@ -673,7 +673,7 @@ libvincoin_consensus_a_SOURCES = \
 #
 
 # common #
-libvincoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
+libvincoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(BOOST_CPPFLAGS)
 libvincoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_common_a_SOURCES = \
   addresstype.cpp \
@@ -720,7 +720,7 @@ libvincoin_common_a_SOURCES = \
   script/signingprovider.cpp \
   script/solver.cpp \
   warnings.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 
 if USE_LIBEVENT
 libvincoin_common_a_CPPFLAGS += $(EVENT_CFLAGS)
@@ -729,7 +729,7 @@ endif
 #
 
 # util #
-libvincoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libvincoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 libvincoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_util_a_SOURCES = \
   support/lockedpool.cpp \
@@ -769,24 +769,24 @@ libvincoin_util_a_SOURCES = \
   util/string.cpp \
   util/time.cpp \
   util/tokenpipe.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 #
 
 # cli #
-libvincoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libvincoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 libvincoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libvincoin_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
-  $(BITCOIN_CORE_H)
+  $(VINCOIN_CORE_H)
 
 nodist_libvincoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # vincoind & vincoin-node binaries #
 vincoin_daemon_sources = vincoind.cpp
-vincoin_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+vincoin_bin_cppflags = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 vincoin_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
 vincoin_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
@@ -795,13 +795,13 @@ vincoin_daemon_sources += vincoind-res.rc
 endif
 
 vincoin_bin_ldadd = \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+  $(LIBVINCOIN_WALLET) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_ZMQ) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBVINCOIN_ZMQ) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
@@ -812,17 +812,17 @@ vincoind_SOURCES = $(vincoin_daemon_sources) init/vincoind.cpp
 vincoind_CPPFLAGS = $(vincoin_bin_cppflags)
 vincoind_CXXFLAGS = $(vincoin_bin_cxxflags)
 vincoind_LDFLAGS = $(vincoin_bin_ldflags)
-vincoind_LDADD = $(LIBBITCOIN_NODE) $(vincoin_bin_ldadd)
+vincoind_LDADD = $(LIBVINCOIN_NODE) $(vincoin_bin_ldadd)
 
 vincoin_node_SOURCES = $(vincoin_daemon_sources) init/vincoin-node.cpp
 vincoin_node_CPPFLAGS = $(vincoin_bin_cppflags)
 vincoin_node_CXXFLAGS = $(vincoin_bin_cxxflags)
 vincoin_node_LDFLAGS = $(vincoin_bin_ldflags)
-vincoin_node_LDADD = $(LIBBITCOIN_NODE) $(vincoin_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
+vincoin_node_LDADD = $(LIBVINCOIN_NODE) $(vincoin_bin_ldadd) $(LIBVINCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
 
 # vincoin-cli binary #
 vincoin_cli_SOURCES = vincoin-cli.cpp
-vincoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+vincoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(EVENT_CFLAGS)
 vincoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 vincoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
@@ -831,18 +831,18 @@ vincoin_cli_SOURCES += vincoin-cli-res.rc
 endif
 
 vincoin_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+  $(LIBVINCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO)
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
+  $(LIBVINCOIN_CRYPTO)
 
 vincoin_cli_LDADD += $(EVENT_LIBS)
 #
 
 # vincoin-tx binary #
 vincoin_tx_SOURCES = vincoin-tx.cpp
-vincoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+vincoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 vincoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 vincoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
@@ -852,10 +852,10 @@ endif
 
 vincoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_CRYPTO) \
   $(LIBSECP256K1)
 #
 
@@ -866,13 +866,13 @@ vincoin_wallet_CPPFLAGS = $(vincoin_bin_cppflags)
 vincoin_wallet_CXXFLAGS = $(vincoin_bin_cxxflags)
 vincoin_wallet_LDFLAGS = $(vincoin_bin_ldflags)
 vincoin_wallet_LDADD = \
-  $(LIBBITCOIN_WALLET_TOOL) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+  $(LIBVINCOIN_WALLET_TOOL) \
+  $(LIBVINCOIN_WALLET) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_CRYPTO) \
   $(LIBSECP256K1) \
   $(BDB_LIBS) \
   $(SQLITE_LIBS)
@@ -884,7 +884,7 @@ endif
 
 # vincoin-util binary #
 vincoin_util_SOURCES = vincoin-util.cpp
-vincoin_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+vincoin_util_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 vincoin_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 vincoin_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
@@ -893,21 +893,21 @@ vincoin_util_SOURCES += vincoin-util-res.rc
 endif
 
 vincoin_util_LDADD = \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+  $(LIBVINCOIN_COMMON) \
+  $(LIBVINCOIN_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBVINCOIN_CONSENSUS) \
+  $(LIBVINCOIN_CRYPTO) \
   $(LIBSECP256K1)
 #
 
 # vincoin-chainstate binary #
 vincoin_chainstate_SOURCES = vincoin-chainstate.cpp
-vincoin_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
+vincoin_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES) $(BOOST_CPPFLAGS)
 vincoin_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 vincoin_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS) $(LIBTOOL_APP_LDFLAGS) -static
-vincoin_chainstate_LDADD = $(LIBBITCOINKERNEL)
+vincoin_chainstate_LDADD = $(LIBVINCOINKERNEL)
 
 # libtool is unable to calculate this indirect dependency, presumably because it's a subproject.
 # libsecp256k1 only needs to be linked in when libvincoinkernel is static.
@@ -915,11 +915,11 @@ vincoin_chainstate_LDADD += $(LIBSECP256K1)
 #
 
 # vincoinkernel library #
-if BUILD_BITCOIN_KERNEL_LIB
-lib_LTLIBRARIES += $(LIBBITCOINKERNEL)
+if BUILD_VINCOIN_KERNEL_LIB
+lib_LTLIBRARIES += $(LIBVINCOINKERNEL)
 
 libvincoinkernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
-libvincoinkernel_la_LIBADD = $(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
+libvincoinkernel_la_LIBADD = $(LIBVINCOIN_CRYPTO) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
 libvincoinkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS)
 
 # libvincoinkernel requires default symbol visibility, explicitly specify that
@@ -1015,19 +1015,19 @@ libvincoinkernel_la_SOURCES = \
 # Required for obj/build.h to be generated first.
 # More details: https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html
 libvincoinkernel_la-clientversion.l$(OBJEXT): obj/build.h
-endif # BUILD_BITCOIN_KERNEL_LIB
+endif # BUILD_VINCOIN_KERNEL_LIB
 #
 
 # vincoinconsensus library #
-if BUILD_BITCOIN_LIBS
-lib_LTLIBRARIES += $(LIBBITCOINCONSENSUS)
+if BUILD_VINCOIN_LIBS
+lib_LTLIBRARIES += $(LIBVINCOINCONSENSUS)
 
 include_HEADERS = script/vincoinconsensus.h
 libvincoinconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libvincoin_crypto_base_la_SOURCES) $(libvincoin_consensus_a_SOURCES)
 
 libvincoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
 libvincoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libvincoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL -DDISABLE_OPTIMIZED_SHA256
+libvincoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_VINCOIN_INTERNAL -DDISABLE_OPTIMIZED_SHA256
 libvincoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
@@ -1103,7 +1103,7 @@ EXTRA_DIST += $(libvincoin_ipc_mpgen_input)
 ipc/capnp/libvincoin_ipc_a-protocol.$(OBJEXT): $(libvincoin_ipc_mpgen_input:=.h)
 
 if BUILD_MULTIPROCESS
-LIBBITCOIN_IPC=libvincoin_ipc.a
+LIBVINCOIN_IPC=libvincoin_ipc.a
 libvincoin_ipc_a_SOURCES = \
   ipc/capnp/common-types.h \
   ipc/capnp/context.h \
@@ -1116,7 +1116,7 @@ libvincoin_ipc_a_SOURCES = \
   ipc/process.cpp \
   ipc/process.h \
   ipc/protocol.h
-libvincoin_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libvincoin_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(VINCOIN_INCLUDES)
 libvincoin_ipc_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(LIBMULTIPROCESS_CFLAGS)
 
 include $(MPGEN_PREFIX)/include/mpgen.mk
