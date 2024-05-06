@@ -1,0 +1,93 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/vincoin/.vincoin" ]; then
+	VINCOIND_DEFAULT_DATADIR="/var/lib/vincoin/.vincoin"
+else
+	VINCOIND_DEFAULT_DATADIR="/var/lib/vincoind"
+fi
+
+VINCOIND_CONFIGFILE=${VINCOIND_CONFIGFILE:-/etc/vincoin/vincoin.conf}
+VINCOIND_PIDDIR=${VINCOIND_PIDDIR:-/var/run/vincoind}
+VINCOIND_PIDFILE=${VINCOIND_PIDFILE:-${VINCOIND_PIDDIR}/vincoind.pid}
+VINCOIND_DATADIR=${VINCOIND_DATADIR:-${VINCOIND_DEFAULT_DATADIR}}
+VINCOIND_USER=${VINCOIND_USER:-${VINCOIN_USER:-vincoin}}
+VINCOIND_GROUP=${VINCOIND_GROUP:-vincoin}
+VINCOIND_BIN=${VINCOIND_BIN:-/usr/bin/vincoind}
+VINCOIND_NICE=${VINCOIND_NICE:-${NICELEVEL:-0}}
+VINCOIND_OPTS="${VINCOIND_OPTS:-${VINCOIN_OPTS}}"
+
+name="Vincoin Core Daemon"
+description="Vincoin cryptocurrency P2P network daemon"
+
+command="/usr/bin/vincoind"
+command_args="-pid=\"${VINCOIND_PIDFILE}\" \
+		-conf=\"${VINCOIND_CONFIGFILE}\" \
+		-datadir=\"${VINCOIND_DATADIR}\" \
+		-daemon \
+		${VINCOIND_OPTS}"
+
+required_files="${VINCOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${VINCOIND_USER} \
+			-N ${VINCOIND_NICE} -w 2000"
+pidfile="${VINCOIND_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${VINCOIND_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${VINCOIND_USER}:${VINCOIND_GROUP}" \
+	"${VINCOIND_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${VINCOIND_USER}:${VINCOIND_GROUP}" \
+	"${VINCOIND_PIDDIR}"
+
+	checkpath -f \
+	-o "${VINCOIND_USER}:${VINCOIND_GROUP}" \
+	-m 0660 \
+	"${VINCOIND_CONFIGFILE}"
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if grep -qs '^rpcuser=' "${VINCOIND_CONFIGFILE}" && \
+		! grep -qs '^rpcpassword=' "${VINCOIND_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run vincoind."
+		eerror "The setting must appear in ${VINCOIND_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Vincoin Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

@@ -1,9 +1,9 @@
-// Copyright (c) 2022 The Bitcoin Core developers
+// Copyright (c) 2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_TXRECONCILIATION_H
-#define BITCOIN_NODE_TXRECONCILIATION_H
+#ifndef VINCOIN_NODE_TXRECONCILIATION_H
+#define VINCOIN_NODE_TXRECONCILIATION_H
 
 #include <net.h>
 #include <sync.h>
@@ -86,4 +86,4 @@ public:
     bool IsPeerRegistered(NodeId peer_id) const;
 };
 
-#endif // BITCOIN_NODE_TXRECONCILIATION_H
+#endif // VINCOIN_NODE_TXRECONCILIATION_H

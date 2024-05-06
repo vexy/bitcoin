@@ -1,9 +1,9 @@
-// Copyright (c) 2023 The Bitcoin Core developers
+// Copyright (c) 2023 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_UTIL_RANDOM_H
-#define BITCOIN_TEST_UTIL_RANDOM_H
+#ifndef VINCOIN_TEST_UTIL_RANDOM_H
+#define VINCOIN_TEST_UTIL_RANDOM_H
 
 #include <consensus/amount.h>
 #include <random.h>
@@ -72,4 +72,4 @@ static inline CAmount InsecureRandMoneyAmount()
     return static_cast<CAmount>(InsecureRandRange(MAX_MONEY + 1));
 }
 
-#endif // BITCOIN_TEST_UTIL_RANDOM_H
+#endif // VINCOIN_TEST_UTIL_RANDOM_H

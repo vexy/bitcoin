@@ -1,5 +1,5 @@
-# Vincoin ~ The [Bitcoin](https://github.com/bitcoin/bitcoin) Experiment
-Back in 2019, at the dawn of "_cryptocurrencies_" and other faulty Bitcoin implementations, the idea of **Vincoin** emerged.  
+# Vincoin ~ The [Vincoin](https://github.com/vincoin/vincoin) Experiment
+Back in 2019, at the dawn of "_cryptocurrencies_" and other faulty Vincoin implementations, the idea of **Vincoin** emerged.  
 
 It is imagined to expand Bitcoin basic functionalities and allow huge group(s) of people get better understanding, access and usage of this technology. 
 

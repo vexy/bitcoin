@@ -1,12 +1,12 @@
-// Copyright (c) 2021-2022 The Bitcoin Core developers
+// Copyright (c) 2021-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_TEST_UTIL_H
-#define BITCOIN_WALLET_TEST_UTIL_H
+#ifndef VINCOIN_WALLET_TEST_UTIL_H
+#define VINCOIN_WALLET_TEST_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/vincoin-config.h>
 #endif
 
 #include <addresstype.h>
@@ -132,4 +132,4 @@ std::unique_ptr<WalletDatabase> CreateMockableWalletDatabase(MockableData record
 MockableDatabase& GetMockableDatabase(CWallet& wallet);
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_TEST_UTIL_H
+#endif // VINCOIN_WALLET_TEST_UTIL_H

@@ -1,12 +1,12 @@
-// Copyright (c) 2009-2022 The Bitcoin Core developers
+// Copyright (c) 2009-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_REGISTER_H
-#define BITCOIN_RPC_REGISTER_H
+#ifndef VINCOIN_RPC_REGISTER_H
+#define VINCOIN_RPC_REGISTER_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/vincoin-config.h>
 #endif
 
 /** These are in one header file to avoid creating tons of single-function
@@ -42,4 +42,4 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
     RegisterTxoutProofRPCCommands(t);
 }
 
-#endif // BITCOIN_RPC_REGISTER_H
+#endif // VINCOIN_RPC_REGISTER_H

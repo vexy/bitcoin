@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2022 The Bitcoin Core developers
+// Copyright (c) 2009-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLETDB_H
-#define BITCOIN_WALLET_WALLETDB_H
+#ifndef VINCOIN_WALLET_WALLETDB_H
+#define VINCOIN_WALLET_WALLETDB_H
 
 #include <script/sign.h>
 #include <wallet/db.h>
@@ -317,4 +317,4 @@ bool LoadEncryptionKey(CWallet* pwallet, DataStream& ssKey, DataStream& ssValue,
 bool LoadHDChain(CWallet* pwallet, DataStream& ssValue, std::string& strErr);
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_WALLETDB_H
+#endif // VINCOIN_WALLET_WALLETDB_H

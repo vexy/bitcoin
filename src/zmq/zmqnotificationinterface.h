@@ -1,9 +1,9 @@
-// Copyright (c) 2015-2022 The Bitcoin Core developers
+// Copyright (c) 2015-2022 The Vincoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
-#define BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#ifndef VINCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#define VINCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
 
 #include <primitives/transaction.h>
 #include <validationinterface.h>
@@ -47,4 +47,4 @@ private:
 
 extern std::unique_ptr<CZMQNotificationInterface> g_zmq_notification_interface;
 
-#endif // BITCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H
+#endif // VINCOIN_ZMQ_ZMQNOTIFICATIONINTERFACE_H

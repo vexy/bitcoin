@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2024 The Bitcoin Core developers
+# Copyright (c) 2024 The Vincoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 from decimal import Decimal
@@ -7,7 +7,7 @@ from decimal import Decimal
 from test_framework.messages import (
     MAX_BIP125_RBF_SEQUENCE,
 )
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import VincoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -34,7 +34,7 @@ def cleanup(extra_args=None):
         return wrapper
     return decorator
 
-class MempoolAcceptV3(BitcoinTestFramework):
+class MempoolAcceptV3(VincoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-acceptnonstdtxn=1"]]
