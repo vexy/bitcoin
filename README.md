@@ -41,6 +41,7 @@ _TBD_
 
 ### Contributors
 - [Vexy](https://github.com/vexy): `6302D860 B74CBD34 6482DBA2 518766D0 8213DBC0`
+- [FilipK](https://github.com/FilipKolakovic)
 
 > Vincoin is in _early alpha stage_. Expect bugs and incomplete features.
 
@@ -51,5 +52,5 @@ _TBD_
 </p>
 
 ---
-Copyright (c) 2019 [Vexy](https://github.com/vexy)
+Copyright (c) 2019 [Vexy](https://github.com/vexy)  [FilipK](https://github.com/FilipKolakovic)
 
